@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Revit结构模型建立 | 嗜血星空earth</title><meta name="description" content="Revit结构模型建立"><meta name="keywords" content="原创,Revit,结构"><meta name="author" content="嗜血星空earth"><meta name="copyright" content="嗜血星空earth"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Revit结构模型建立"><meta name="twitter:description" content="Revit结构模型建立"><meta name="twitter:image" content="https://s1.ax1x.com/2023/06/14/pCnxWse.png"><meta property="og:type" content="article"><meta property="og:title" content="Revit结构模型建立"><meta property="og:url" content="http://sxxkearth.github.io/2018/11/01/Revit%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B/"><meta property="og:site_name" content="嗜血星空earth"><meta property="og:description" content="Revit结构模型建立"><meta property="og:image" content="https://s1.ax1x.com/2023/06/14/pCnxWse.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="canonical" href="http://sxxkearth.github.io/2018/11/01/Revit%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B/"><link rel="prev" title="iOS workflow规则" href="http://sxxkearth.github.io/2018/11/04/workflow%E8%A7%84%E5%88%99/"><link rel="next" title="Revit过滤器使用" href="http://sxxkearth.github.io/2018/10/28/Revit%E8%BF%87%E6%BB%A4%E5%99%A8/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: {"languages":{"author":"作者: 嗜血星空earth","link":"链接: http://sxxkearth.github.io/2018/11/01/Revit%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B/","source":"来源: 嗜血星空earth","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请附以署名及出处！"}},
+  copy_copyright_js: true,
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  medium_zoom: 'true',
+  Snackbar: undefined
+  
+}</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="嗜血星空earth" type="application/atom+xml">
+</head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">嗜血星空earth</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="/img/avatar.svg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">46</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">45</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">13</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#%E6%9F%B1"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">柱</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E5%BA%95%E5%9B%BE%E7%9A%84%E7%A1%AE%E5%AE%9A"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">底图的确定</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">注意</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#%E5%A2%99"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">墙</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F-1"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">注意</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#%E6%A2%81"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">梁</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E5%BA%95%E5%9B%BE%E7%9A%84%E7%A1%AE%E5%AE%9A-1"><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">底图的确定</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc_mobile_items-number">3.2.</span> <span class="toc_mobile_items-text">常见问题</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%AD%E6%A2%81%E6%9F%B1%E4%B9%8B%E9%97%B4%E5%8F%B3%E7%BC%9D%E9%9A%99%EF%BC%9A"><span class="toc_mobile_items-number">3.2.1.</span> <span class="toc_mobile_items-text">平面图中梁柱之间右缝隙：</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%96%9C%E6%9D%BF%E4%B8%8A%E7%9A%84%EF%BC%8C%E6%A2%81%E7%9A%84%E5%A4%84%E7%90%86%E3%80%81"><span class="toc_mobile_items-number">3.3.</span> <span class="toc_mobile_items-text">斜板上的，梁的处理、</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E6%B2%BF%E6%9D%BF%E5%80%BE%E6%96%9C%E6%96%B9%E5%90%91%E7%9A%84%E6%A2%81%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc_mobile_items-number">3.3.1.</span> <span class="toc_mobile_items-text">沿板倾斜方向的梁的处理</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E4%B8%8E%E6%9D%BF%E5%80%BE%E6%96%9C%E6%96%B9%E5%90%91%E5%9E%82%E7%9B%B4%E7%9A%84%E6%A2%81%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc_mobile_items-number">3.3.2.</span> <span class="toc_mobile_items-text">与板倾斜方向垂直的梁的处理</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F-2"><span class="toc_mobile_items-number">3.4.</span> <span class="toc_mobile_items-text">注意</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#%E6%9D%BF"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text">板</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%96%9C%E6%9D%BF%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc_mobile_items-number">4.1.</span> <span class="toc_mobile_items-text">斜板的绘制</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E7%9F%A9%E5%BD%A2%E6%96%9C%E6%9D%BF%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc_mobile_items-number">4.1.1.</span> <span class="toc_mobile_items-text">矩形斜板的绘制</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E5%BC%82%E5%BD%A2%E6%96%9C%E6%9D%BF%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc_mobile_items-number">4.1.2.</span> <span class="toc_mobile_items-text">异形斜板的绘制</span></a></li></ol></li></ol></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%B1"><span class="toc-number">1.</span> <span class="toc-text">柱</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%95%E5%9B%BE%E7%9A%84%E7%A1%AE%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">底图的确定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.2.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A2%99"><span class="toc-number">2.</span> <span class="toc-text">墙</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-1"><span class="toc-number">2.1.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A2%81"><span class="toc-number">3.</span> <span class="toc-text">梁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%95%E5%9B%BE%E7%9A%84%E7%A1%AE%E5%AE%9A-1"><span class="toc-number">3.1.</span> <span class="toc-text">底图的确定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E5%9B%BE%E4%B8%AD%E6%A2%81%E6%9F%B1%E4%B9%8B%E9%97%B4%E5%8F%B3%E7%BC%9D%E9%9A%99%EF%BC%9A"><span class="toc-number">3.2.1.</span> <span class="toc-text">平面图中梁柱之间右缝隙：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%9C%E6%9D%BF%E4%B8%8A%E7%9A%84%EF%BC%8C%E6%A2%81%E7%9A%84%E5%A4%84%E7%90%86%E3%80%81"><span class="toc-number">3.3.</span> <span class="toc-text">斜板上的，梁的处理、</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%BF%E6%9D%BF%E5%80%BE%E6%96%9C%E6%96%B9%E5%90%91%E7%9A%84%E6%A2%81%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.3.1.</span> <span class="toc-text">沿板倾斜方向的梁的处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E6%9D%BF%E5%80%BE%E6%96%9C%E6%96%B9%E5%90%91%E5%9E%82%E7%9B%B4%E7%9A%84%E6%A2%81%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.3.2.</span> <span class="toc-text">与板倾斜方向垂直的梁的处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-2"><span class="toc-number">3.4.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%BF"><span class="toc-number">4.</span> <span class="toc-text">板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%9C%E6%9D%BF%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc-number">4.1.</span> <span class="toc-text">斜板的绘制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E5%BD%A2%E6%96%9C%E6%9D%BF%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc-number">4.1.1.</span> <span class="toc-text">矩形斜板的绘制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%BD%A2%E6%96%9C%E6%9D%BF%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc-number">4.1.2.</span> <span class="toc-text">异形斜板的绘制</span></a></li></ol></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://s1.ax1x.com/2023/06/14/pCnxWse.png)"><div id="post-info"><div id="post-title"><div class="posttitle">Revit结构模型建立</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2018-11-01<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2023-06-14</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/BIM/">BIM</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon" aria-hidden="true"></i><span>字数总计: </span><span class="word-count">1.8k</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon" aria-hidden="true"></i><span>阅读时长: 5 分钟</span><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true">       </i><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner"><article id="post"><div class="article-container" id="post-content"><html><head></head><body><p>  本文描述利用Revit绘制结构模型。包含结构部分的梁，板，柱，墙的绘制相关的部分内容。按照通常的建模顺序书写。</p>
+<!-- more -->
+
+<blockquote>
+<p>  模型绘制时一般会利用cad底图作为 <font color="red">参照</font> 进行绘制。底图 <strong>仅为参照</strong>。为避免底图误差带来的误差，柱绘制时能契合轴网的尽量契合轴网，墙绘制时尽量契合柱子中心线及边线，梁绘制时尽量契合柱边或者柱中心线，板契合墙柱梁边线。切勿一味对齐到底图。</p>
+</blockquote>
+<p>  CAD底图中，一般墙柱的表达，会出现在连续的上下两层。如下图所示分别为F1及F2中对同一个墙进行的表述。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVgy1fwsx8q6qryj301a04u0ic.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVgy1fwrgyz5c0ej301a04u0ic.jpg" class="lazyload">
+
+
+
+<p><strong><em>夹层的绘制建议复制楼层视图绘制，避免重复调节视图范围。</em></strong></p>
+<ul>
+<li>柱子尽量契合轴网</li>
+<li>墙尽量契合柱子中心/边线</li>
+<li>梁契合柱子中心/边线，拉到柱中心，拉到墙边线。</li>
+<li>板最优是不跨过梁逐一绘制（费时，一般同标高的跨过），升降板位置看填充是否跨过该梁。实线边界的梁不跟随升降板调整偏移量。</li>
+</ul>
+<blockquote>
+<p>绘制过程中，可通过<code>Tab</code>键确定捕捉点为底图还是构件。构件时有虚线引导，需要确保拉到构件。</p>
+</blockquote>
+<h1 id="柱"><a href="#柱" class="headerlink" title="柱"></a>柱</h1><p>  柱子的绘制，一般由标高——标高进行绘制。严格意义上说需 <strong>按现场施工流程下板顶高度进行区分绘制</strong>。即，由板顶——板顶。地下室覆土位置，柱子截止到板顶。<br>绘制时，按高度进行绘制，设置底部标高及顶部标高。</p>
+<h2 id="底图的确定"><a href="#底图的确定" class="headerlink" title="底图的确定"></a>底图的确定</h2><p>  根据实际柱子的位置确定柱子。如：<strong>F1~F2范围内的柱子，将该底图链接到F1层进行绘制</strong>。如下图标高的表示的位置，而非按照图纸名称的楼层链接。因为每个设计师图纸名称的表述方法可能不一致。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpb3v8d2aj30l40chq37.jpg" class="lazyload">
+
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>  绘制过程中，无法以底图为基线进行绘制，一般把柱子放到底图旁边的的位置，然后使用对齐命令，将柱子对齐到与底图一致。如果存在底图有偏差的情况，如柱子为400x400，但是底图为401x401甚至更大的情况，则中心或者边线位置尽量与轴网进行契合，未与轴网产生关系的记为忽略误差。</p>
+<p>如下图情况记为 <strong>柱子中心</strong> 与轴网相互契合，此时若底图尺寸与标注不一致，切勿按底图进行对齐：<br><img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpbi0ujrnj305204ft8h.jpg" class="lazyload"></p>
+<p>如下图情况记为 <strong>柱子边界，及纵向中心</strong> 与轴网相互契合，此时若底图尺寸与标注不一致，切勿按底图进行对齐：<br>因为，此时如果底图高度为602，若对倒底图的上边线，就会产生误差。<br><img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpbm4jhl8j305304uwe9.jpg" class="lazyload"></p>
+<h1 id="墙"><a href="#墙" class="headerlink" title="墙"></a>墙</h1><p>  在结构模型中绘制的墙一般包括剪力墙，人防墙，以及防火墙等，一般需要分开类型进行绘制。墙的绘制时，可以以墙身外边线绘制，以方便以底图进行绘制。<br>下图为部分墙图示意：</p>
+<ul>
+<li>结构中，不管是什么图层的，墙柱图中只有墙柱，如下图一所示的也是墙，部分矩形样式的为墙的末端，但是没有到柱子的大小，可用柱绘制，也可以用墙。</li>
+<li>阴影部分的墙为当前楼层的墙，未填充的为下一层的墙。如下图二三所示（柱同）</li>
+</ul>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwq1uv1husj309y06pmwz.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwq1t579edj30c509aq2y.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwq1qjl5j0j305m09njrc.jpg" class="lazyload">
+
+<h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2><p>  出现跟柱子一样的底图误差情况时，可根据图纸按需进行对柱中心或者边界进行契合。</p>
+<h1 id="梁"><a href="#梁" class="headerlink" title="梁"></a>梁</h1><p>  梁的绘制以标高位置进行绘制，eg：F2标高上绘制的梁，梁的顶部标高为F2。即：绘制的是F1顶部的梁。<br>因为梁根柱子之间软件会自动进行扣减，因此为方便后续的操作，绘制梁的时候，<strong>拉到柱子的中心位置</strong>。梁的绘制课通过拾取线，但最好捕捉柱子的中心绘制。</p>
+<h2 id="底图的确定-1"><a href="#底图的确定-1" class="headerlink" title="底图的确定"></a>底图的确定</h2><p>  根据上面叙述的绘制方法，即如下标高表的位置的梁，CAD底图链接到F2的位置上绘制。绘制的为F1顶部的梁。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpgn4f6pfj30j70cv74l.jpg" class="lazyload">
+
+
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="平面图中梁柱之间右缝隙："><a href="#平面图中梁柱之间右缝隙：" class="headerlink" title="平面图中梁柱之间右缝隙："></a>平面图中梁柱之间右缝隙：</h3><p>   软件问题，平面图中同时有多跟梁与同一根柱有相交关系时，平面图中会存在如下图所示的缝隙：</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpe5whc0bj30ib08taa0.jpg" class="lazyload">
+
+<p>梁已经拉到柱子中心，但还是有缝隙，三维及二维均可见解决方法有：</p>
+<ul>
+<li>右击梁端点，不允许链接</li>
+<li>用过连接选项卡的转换连接顺序命令（几根梁之间多点几次）<br>我常用的是不允许连接，也不确定对不对</li>
+</ul>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpe8dbrgxj304b05daa2.jpg" class="lazyload">
+
+<h2 id="斜板上的，梁的处理、"><a href="#斜板上的，梁的处理、" class="headerlink" title="斜板上的，梁的处理、"></a>斜板上的，梁的处理、</h2><p>如下图所示的斜板上的梁的处理方式：<br><img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpd8ahylyj30kx0htdh2.jpg" class="lazyload"><br>由上图可看出，该板为从上至下的斜板。 在调整好板得倾斜度之后，接着对梁进行处理。图中h=250，意思为板厚=250mm</p>
+<h3 id="沿板倾斜方向的梁的处理"><a href="#沿板倾斜方向的梁的处理" class="headerlink" title="沿板倾斜方向的梁的处理"></a>沿板倾斜方向的梁的处理</h3><p>  沿板倾斜方向的梁，即上图中纵向梁的处理：</p>
+<blockquote>
+<p>思路为调整梁的起始及终点标高的偏移量</p>
+</blockquote>
+<ul>
+<li>需要注意的是：<br>  梁的起点跟终点位置，必须与标高变化的起止位置一致。即梁的长度范围为-2000~-3000标高标注线的范围。此时，只需要更改梁的起始及终点标高偏移分别为等于板起始及标高偏移量即可。<br>最终样式如下所示：</li>
+</ul>
+<center> 顶视图</center>
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpdltl4c8j30bs0avwei.jpg" class="lazyload">
+
+<center> 剖面图（右视图） </center>
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpdpn4pa8j30nb0bnt8y.jpg" class="lazyload">
+
+<h3 id="与板倾斜方向垂直的梁的处理"><a href="#与板倾斜方向垂直的梁的处理" class="headerlink" title="与板倾斜方向垂直的梁的处理"></a>与板倾斜方向垂直的梁的处理</h3><p>  与板倾斜方向垂直的梁的处理，即上图中横向梁的处理。</p>
+<blockquote>
+<p>思路为，在剖面的位置，将该梁向下移动角点位置与板斜面相交。</p>
+</blockquote>
+<p>最终样式如下图所示（未选中部分的梁）：</p>
+<center> 剖面图（右视图） </center>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpduqipeoj30fv0c83yl.jpg" class="lazyload">
+
+
+
+
+<h2 id="注意-2"><a href="#注意-2" class="headerlink" title="注意"></a>注意</h2><p>  出现跟柱子一样的底图误差情况时，可根据图纸按需进行对柱中心或者边界进行契合。</p>
+<h1 id="板"><a href="#板" class="headerlink" title="板"></a>板</h1><h2 id="斜板的绘制"><a href="#斜板的绘制" class="headerlink" title="斜板的绘制"></a>斜板的绘制</h2><h3 id="矩形斜板的绘制"><a href="#矩形斜板的绘制" class="headerlink" title="矩形斜板的绘制"></a>矩形斜板的绘制</h3><p>  如上图所示的矩形斜板，可以通过更改子图元的方式，将下面两个点的高程往下降低。即可达到目的</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpepo8u9cj30jm03f74m.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpeqjb8c5j303w02q0qx.jpg" class="lazyload">
+
+
+<h3 id="异形斜板的绘制"><a href="#异形斜板的绘制" class="headerlink" title="异形斜板的绘制"></a>异形斜板的绘制</h3><p>  绘制板后绘制坡度箭头。坡度箭头的绘制沿着坡度方向的最长点，如下图所示：</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpeu4vcodj307b03gjre.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpev9968dj30bo082q2q.jpg" class="lazyload">
+
+<p>选中坡度箭头，设置尾高即可。无需计算坡度。如下设置尾高为300，板偏移量为0 的效果（本层为-0.05标高）为：</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpex78knoj306n04w0sm.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwpezfwk7vj30gl07ja9v.jpg" class="lazyload">
+
+
+<ul>
+<li>异形板延板方向的梁的处理，梁的长度跟随异形板的边界，起点终点标高偏移量的设置可以通过测量该梁位置边界而定。</li>
+</ul>
+</body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">嗜血星空earth</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://sxxkearth.github.io/2018/11/01/Revit%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B/">http://sxxkearth.github.io/2018/11/01/Revit%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请附以署名及出处！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8E%9F%E5%88%9B/">原创    </a><a class="post-meta__tags" href="/tags/Revit/">Revit    </a><a class="post-meta__tags" href="/tags/%E7%BB%93%E6%9E%84/">结构    </a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2023/06/14/pCnxWse.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2018/11/04/workflow%E8%A7%84%E5%88%99/"><img class="prev_cover lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCuiKfA.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>iOS workflow规则</span></div></a></div><div class="next-post pull_right"><a href="/2018/10/28/Revit%E8%BF%87%E6%BB%A4%E5%99%A8/"><img class="next_cover lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCnxWse.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>Revit过滤器使用</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'fooYzO3pQsH72XHHui9Z3OFZ-gzGzoHsz',
+  appKey:'1uB67kCqqPxsdg68UiuqZfEG',
+  placeholder:'留言无通知，需要回复请移步留言板留言，如需快速回复，请通过邮箱联系哦~ヾ(￣▽￣)',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-cn',
+  recordIP: true
+});</script></div></div></div><footer id="footer" style="background-image: url(https://s1.ax1x.com/2023/06/14/pCnxWse.png)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 <i class="fa fa-star card-announcement-animation" aria-hidden="true" style="color:#ff0000"></i> 嗜血星空earth</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span><br><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> People  | 
+<i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> Time</a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script async src="/js/search/local-search.js"></script><script src="/js/baidupush.js"> </script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

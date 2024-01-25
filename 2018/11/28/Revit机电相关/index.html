@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Revit机电模型相关 | 嗜血星空earth</title><meta name="description" content="Revit机电模型相关"><meta name="keywords" content="原创,Revit,机电"><meta name="author" content="嗜血星空earth"><meta name="copyright" content="嗜血星空earth"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Revit机电模型相关"><meta name="twitter:description" content="Revit机电模型相关"><meta name="twitter:image" content="https://s1.ax1x.com/2023/06/14/pCnxWse.png"><meta property="og:type" content="article"><meta property="og:title" content="Revit机电模型相关"><meta property="og:url" content="http://sxxkearth.github.io/2018/11/28/Revit%E6%9C%BA%E7%94%B5%E7%9B%B8%E5%85%B3/"><meta property="og:site_name" content="嗜血星空earth"><meta property="og:description" content="Revit机电模型相关"><meta property="og:image" content="https://s1.ax1x.com/2023/06/14/pCnxWse.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="canonical" href="http://sxxkearth.github.io/2018/11/28/Revit%E6%9C%BA%E7%94%B5%E7%9B%B8%E5%85%B3/"><link rel="prev" title="Next自定义css样式的使用" href="http://sxxkearth.github.io/2018/11/30/Next%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/"><link rel="next" title="Revit文件中链接Revit模型" href="http://sxxkearth.github.io/2018/11/18/Revit%E9%93%BE%E6%8E%A5Revit%E6%A8%A1%E5%9E%8B/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: {"languages":{"author":"作者: 嗜血星空earth","link":"链接: http://sxxkearth.github.io/2018/11/28/Revit%E6%9C%BA%E7%94%B5%E7%9B%B8%E5%85%B3/","source":"来源: 嗜血星空earth","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请附以署名及出处！"}},
+  copy_copyright_js: true,
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  medium_zoom: 'true',
+  Snackbar: undefined
+  
+}</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="嗜血星空earth" type="application/atom+xml">
+</head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">嗜血星空earth</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="/img/avatar.svg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">46</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">45</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">13</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%9C%BA%E7%94%B5%E9%83%A8%E5%88%86%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">机电部分包含的内容</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%A0%87%E9%AB%98%E8%BD%B4%E7%BD%91%E7%9A%84%E5%BB%BA%E7%AB%8B"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">标高轴网的建立</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">配色设置</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E7%AE%A1%E9%81%93%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text">管道配色设置</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E6%96%B0%E5%BB%BA%E7%AE%A1%E9%81%93%E7%B3%BB%E7%BB%9F"><span class="toc_mobile_items-number">4.1.</span> <span class="toc_mobile_items-text">新建管道系统</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E9%80%9A%E8%BF%87%E5%9B%BE%E4%BE%8B%E8%AE%BE%E7%BD%AE"><span class="toc_mobile_items-number">4.2.</span> <span class="toc_mobile_items-text">通过图例设置</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc_mobile_items-number">4.3.</span> <span class="toc_mobile_items-text">注意事项</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E9%80%9A%E8%BF%87%E8%BF%87%E6%BB%A4%E5%99%A8%E9%85%8D%E8%89%B2"><span class="toc_mobile_items-number">4.4.</span> <span class="toc_mobile_items-text">通过过滤器配色</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc_mobile_items-number">4.4.1.</span> <span class="toc_mobile_items-text">注意事项</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E9%A3%8E%E7%AE%A1%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc_mobile_items-number">5.</span> <span class="toc_mobile_items-text">风管配色设置</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%A1%A5%E6%9E%B6%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc_mobile_items-number">6.</span> <span class="toc_mobile_items-text">桥架配色设置</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-2"><span class="toc_mobile_items-number">6.1.</span> <span class="toc_mobile_items-text">注意事项</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%9C%BA%E7%94%B5%E6%A0%87%E6%B3%A8%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc_mobile_items-number">7.</span> <span class="toc_mobile_items-text">机电标注样式设置</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-3"><span class="toc_mobile_items-number">7.1.</span> <span class="toc_mobile_items-text">注意事项</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E8%A7%86%E5%9B%BE%E6%A0%B7%E6%9D%BF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc_mobile_items-number">8.</span> <span class="toc_mobile_items-text">视图样板的应用</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-4"><span class="toc_mobile_items-number">9.</span> <span class="toc_mobile_items-text">注意事项</span></a></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E7%94%B5%E9%83%A8%E5%88%86%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">1.</span> <span class="toc-text">机电部分包含的内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E9%AB%98%E8%BD%B4%E7%BD%91%E7%9A%84%E5%BB%BA%E7%AB%8B"><span class="toc-number">2.</span> <span class="toc-text">标高轴网的建立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配色设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E9%81%93%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc-number">4.</span> <span class="toc-text">管道配色设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E7%AE%A1%E9%81%93%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.1.</span> <span class="toc-text">新建管道系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%9B%BE%E4%BE%8B%E8%AE%BE%E7%BD%AE"><span class="toc-number">4.2.</span> <span class="toc-text">通过图例设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">4.3.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E8%BF%87%E6%BB%A4%E5%99%A8%E9%85%8D%E8%89%B2"><span class="toc-number">4.4.</span> <span class="toc-text">通过过滤器配色</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc-number">4.4.1.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%8E%E7%AE%A1%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">风管配色设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%A5%E6%9E%B6%E9%85%8D%E8%89%B2%E8%AE%BE%E7%BD%AE"><span class="toc-number">6.</span> <span class="toc-text">桥架配色设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-2"><span class="toc-number">6.1.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E7%94%B5%E6%A0%87%E6%B3%A8%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">7.</span> <span class="toc-text">机电标注样式设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-3"><span class="toc-number">7.1.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E5%9B%BE%E6%A0%B7%E6%9D%BF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">8.</span> <span class="toc-text">视图样板的应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-4"><span class="toc-number">9.</span> <span class="toc-text">注意事项</span></a></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://s1.ax1x.com/2023/06/14/pCnxWse.png)"><div id="post-info"><div id="post-title"><div class="posttitle">Revit机电模型相关</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2018-11-28<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2023-06-14</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/BIM/">BIM</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon" aria-hidden="true"></i><span>字数总计: </span><span class="word-count">1.4k</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon" aria-hidden="true"></i><span>阅读时长: 4 分钟</span><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true">       </i><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner"><article id="post"><div class="article-container" id="post-content"><html><head></head><body><p>  Revit中，按照过滤器的分类可以分为：<code>建筑</code>，<code>结构</code>，<code>机械</code>，<code>电气</code>，<code>管道</code>,五大类。机电的部分包含机械，电气以及管道部分。本文主要描述机电部分相关内容的基础，及机电配色的设置，注释等。</p>
+<!-- more -->
+
+<h2 id="机电部分包含的内容"><a href="#机电部分包含的内容" class="headerlink" title="机电部分包含的内容"></a>机电部分包含的内容</h2><blockquote>
+<p>电气：电缆桥架，线管，电气设备等<br>管道：管道，管件，喷头，机械设备等<br>机械：风管，风管附件，机械设备等。</p>
+</blockquote>
+<h2 id="标高轴网的建立"><a href="#标高轴网的建立" class="headerlink" title="标高轴网的建立"></a>标高轴网的建立</h2><p>  机电项目中的轴网需与建筑轴网一致，通过链接建筑轴网，复制监视创建，以确保模型原点一致。建立方法见<a href="http://sxxkearth.github.io/2018/11/28/链接Revit模型/">Revit文件中链接Revit模型</a>。在此不在重复。自带机电样板中没有立面，可简单建立一个剖面查看，当然也可以自己放置立面标头。</p>
+<h2 id="配色设置"><a href="#配色设置" class="headerlink" title="配色设置"></a>配色设置</h2><p>  由于机电中管道数量繁多，为了直观的分辨管道的类型，需要对管道进行基本的配色处理。对管道/风管进行配色的方法有管道图例及过滤器两种。电缆桥架配色只能通过设置过滤器。项目中常用的是使用过滤器对管道进行配色，以下两种方法均会表示，按需选择。</p>
+<blockquote>
+<p>图例  <code>分析</code>-<code>颜色填充</code>-<code>风管/管道图例</code></p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlpd7xipzj30p2032jru.jpg" class="lazyload">
+
+<blockquote>
+<p>过滤器  <code>视图</code>-<code>可见性</code>-<code>过滤器</code></p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlpezu1ldj30cg05474i.jpg" class="lazyload">
+
+<h2 id="管道配色设置"><a href="#管道配色设置" class="headerlink" title="管道配色设置"></a>管道配色设置</h2><h3 id="新建管道系统"><a href="#新建管道系统" class="headerlink" title="新建管道系统"></a>新建管道系统</h3><p>  在<code>项目浏览器</code>下–<code>族</code>–<code>管道系统</code>选用相似的系统类型，复制，重新命名即可。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlq6rpwlij304w041wea.jpg" class="lazyload">
+
+<h3 id="通过图例设置"><a href="#通过图例设置" class="headerlink" title="通过图例设置"></a>通过图例设置</h3><blockquote>
+<p>平面视图下，<code>分析</code>-<code>颜色填充</code>-<code>管道图例</code>，建立管道图例。先随便选则一种方案，放置在平面视图中。</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlpm9aj2vj30a905emx2.jpg" class="lazyload">
+
+<blockquote>
+<p>选中刚刚放置的图例–<code>编辑方案</code></p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlppsav0yj309n06pjrh.jpg" class="lazyload">
+
+<blockquote>
+<p><code>新建方案</code>–<code>设置方案标题</code>–设置为按<code>系统类型分类</code>–<code>新建值</code>eg：消防系统–<code>设置颜色</code>及<code>填充样式</code>–<code>更改荧光笔填充宽度</code>。如下图所示：</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlpuyjbdlj30or0e5aav.jpg" class="lazyload">
+
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>新建的值必须是在系统类型中存在的值，不然会出现以下报错/无法生成的情况：</li>
+</ul>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlq08acl8j30a603zdfm.jpg" class="lazyload">
+
+<ul>
+<li>荧光笔填充宽度默认值比较大，会出现如下情况（颜色超过管道，甚至管道上无颜色）：</li>
+</ul>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlqbpw9m2j305g02t0sh.jpg" class="lazyload">
+
+<ul>
+<li>按照图例设置的配色，在绘制新的类型的管道的时候，配色方案中会自动生成该系统类型的值，只需要在方案中添加颜色即可。</li>
+<li>配色方案中的<code>可见</code>选型的勾，设置的只是是否可见颜色，管道还是能够看到。</li>
+<li>取消图例配色：编辑方案，将方案选择为<code>无</code>确定即可。</li>
+</ul>
+<h3 id="通过过滤器配色"><a href="#通过过滤器配色" class="headerlink" title="通过过滤器配色"></a>通过过滤器配色</h3><p>  以下以建立消防及喷淋系统的配色为例：</p>
+<blockquote>
+<p><code>过滤器</code>中,<code>新建过滤器</code>，按需要命名，在此命名为消防系统–<code>设置消防系统中需要配色的类别</code>–<code>添加过滤条件</code>–过滤条件为<code>系统类型</code>–<code>等于</code>–<code>消防系统</code>–<code>添加过滤器</code>–选择刚刚新建的<code>消防系统</code>过滤器– <code>设置颜色及填充图案</code>即可。</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlr9boi3kj30xg0lo403.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlrh1riovj30ph0lumxg.jpg" class="lazyload">
+
+<h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>过滤器中可见性的勾是整个过滤器中包含的所有类别图元，不单单是指的颜色。跟临时隐藏以及关闭模型类别的可见性效果一致，可按需使用。</li>
+<li>类似喷淋系统过滤器的建立，因为跟消防所选择的类别一样，都是管道及管件，因此，可以直接复制管道过滤器进行重命名，更改过滤出来的系统即可。复制在第三步新建的右边的按键。</li>
+<li>按照系统类型设置配色时，同样需要先新建相应的系统类型，不然设置过滤条件的时候就没有该类型选择。</li>
+</ul>
+<h2 id="风管配色设置"><a href="#风管配色设置" class="headerlink" title="风管配色设置"></a>风管配色设置</h2><p>风管配色及系统类型的建立参照管道方法，几乎一致。</p>
+<h2 id="桥架配色设置"><a href="#桥架配色设置" class="headerlink" title="桥架配色设置"></a>桥架配色设置</h2><blockquote>
+<p>过滤器新建<code>强电/弱电桥架</code>，过滤出的类别为<code>电缆桥架</code>以及<code>电缆桥架配件</code>–以<code>类型名称</code>–<code>等于</code>–<code>强电/弱电</code>过滤。绘制电缆桥架时<code>复制类型命名为强/弱电</code>配件一样。</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxls6ysu4vj30q00bb0te.jpg" class="lazyload">
+
+<h3 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>没有桥架图例因此只能按照过滤器设置配色</li>
+<li>电缆桥架没有系统类型，因此需要按类型名称设置过滤器。</li>
+<li>电缆桥架配件名称比较恶心：<pre><code>垂直内弯头--下弯通
+垂直外弯头--上弯通</code></pre></li>
+<li>桥架绘制之后，若视图中不可见，检查规程及偏移量。</li>
+</ul>
+<h2 id="机电标注样式设置"><a href="#机电标注样式设置" class="headerlink" title="机电标注样式设置"></a>机电标注样式设置</h2><p><code>关闭三维</code>–<code>注释</code>–<code>按类别标记</code>–<code>选族</code>—<code>标注后双击编辑族</code>–<code>选中族编辑标签</code>–<code>左侧设置添加参数</code>–<code>右侧修改前缀</code>–<code>断开打勾即下一行显示</code>–<code>线段可单独对族修改</code>—<code>载入族覆盖</code>即可</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlsgewnsqj307g0880gx.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlsgwbm75j30fd036wei.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlshddv7tj30n40b2mx7.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlshi9f04j30ca0apq2p.jpg" class="lazyload">
+
+<h3 id="注意事项-3"><a href="#注意事项-3" class="headerlink" title="注意事项"></a>注意事项</h3><p>未关闭三维会报错:</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlsj62le1j30a604ka9w.jpg" class="lazyload">
+
+<h2 id="视图样板的应用"><a href="#视图样板的应用" class="headerlink" title="视图样板的应用"></a>视图样板的应用</h2><p>   新建的配色只在设置过滤器的当前试图有效，在其他视图中不可见。如果需要各视图中颜色一致，可使创建试图样板。<br>eg：三维有颜色，楼层平面中没有颜色，在有颜色处：<code>视图</code>–<code>视图样板</code>—<code>从当前视图创建样板</code>–<code>输入名称</code>–<code>确定</code>—<code>到楼层平面</code>—<code>视图样板</code>—<code>将样板属性应用于当前视图</code>–<code>选刚创建的</code>–<code>确定</code>即可。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlsoyd0b2j30cz06rt8v.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlsva3uftj306802kjr7.jpg" class="lazyload">
+
+<h2 id="注意事项-4"><a href="#注意事项-4" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>当同时设置过滤器配色及图例配色时，系统默认使用过滤器配色</li>
+</ul>
+</body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">嗜血星空earth</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://sxxkearth.github.io/2018/11/28/Revit%E6%9C%BA%E7%94%B5%E7%9B%B8%E5%85%B3/">http://sxxkearth.github.io/2018/11/28/Revit%E6%9C%BA%E7%94%B5%E7%9B%B8%E5%85%B3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请附以署名及出处！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8E%9F%E5%88%9B/">原创    </a><a class="post-meta__tags" href="/tags/Revit/">Revit    </a><a class="post-meta__tags" href="/tags/%E6%9C%BA%E7%94%B5/">机电    </a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2023/06/14/pCnxWse.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2018/11/30/Next%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/"><img class="prev_cover lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCuCuHe.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Next自定义css样式的使用</span></div></a></div><div class="next-post pull_right"><a href="/2018/11/18/Revit%E9%93%BE%E6%8E%A5Revit%E6%A8%A1%E5%9E%8B/"><img class="next_cover lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCnxWse.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>Revit文件中链接Revit模型</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'fooYzO3pQsH72XHHui9Z3OFZ-gzGzoHsz',
+  appKey:'1uB67kCqqPxsdg68UiuqZfEG',
+  placeholder:'留言无通知，需要回复请移步留言板留言，如需快速回复，请通过邮箱联系哦~ヾ(￣▽￣)',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-cn',
+  recordIP: true
+});</script></div></div></div><footer id="footer" style="background-image: url(https://s1.ax1x.com/2023/06/14/pCnxWse.png)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 <i class="fa fa-star card-announcement-animation" aria-hidden="true" style="color:#ff0000"></i> 嗜血星空earth</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span><br><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> People  | 
+<i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> Time</a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script async src="/js/search/local-search.js"></script><script src="/js/baidupush.js"> </script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

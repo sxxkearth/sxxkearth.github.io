@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>地址收藏 | 嗜血星空earth</title><meta name="description" content="地址收藏"><meta name="keywords"><meta name="author" content="嗜血星空earth"><meta name="copyright" content="嗜血星空earth"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="地址收藏"><meta name="twitter:description" content="地址收藏"><meta name="twitter:image" content="http://sxxkearth.github.io/img/avatar.svg"><meta property="og:type" content="website"><meta property="og:title" content="地址收藏"><meta property="og:url" content="http://sxxkearth.github.io/collect/links/"><meta property="og:site_name" content="嗜血星空earth"><meta property="og:description" content="地址收藏"><meta property="og:image" content="http://sxxkearth.github.io/img/avatar.svg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="canonical" href="http://sxxkearth.github.io/collect/links/"><link rel="preload" href="https://blog.wangyunzi.com/pCnjBy4.jpg" as="image"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: {"languages":{"author":"作者: 嗜血星空earth","link":"链接: http://sxxkearth.github.io/collect/links/","source":"来源: 嗜血星空earth","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请附以署名及出处！"}},
+  copy_copyright_js: true,
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  medium_zoom: 'true',
+  Snackbar: undefined
+  
+}</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="嗜血星空earth" type="application/atom+xml">
+</head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">嗜血星空earth</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="/img/avatar.svg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">46</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">45</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">13</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><nav class="not_index_bg" id="nav"><div class="nav_bg" style="background-image: url(https://blog.wangyunzi.com/pCnjBy4.jpg)"></div><div id="page_site-info"><div id="site-title"><span class="blogtitle">地址收藏</span></div></div></nav><div id="content-outer"><div class="layout_page" id="content-inner"><article id="page"><h1>地址收藏</h1><div class="article-container"><style>
+th, td {
+    border-bottom: 0.1px solid #ddd;
+    border-right: 0px solid #eee;
+    background-color: #fff;
+    margin: auto;
+    font-size: 15px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Lato,Roboto,"PingFang SC","Microsoft JhengHei","Microsoft YaHei",sans-serif; /* 设置字体样式 */
+}
+table {
+    margin: 15px 0;
+    width: 95%;
+    font-size: 15px;
+    border: 0px solid #ddd;
+    margin: auto;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Lato,Roboto,"PingFang SC","Microsoft JhengHei","Microsoft YaHei",sans-serif; /* 设置字体样式 */
+}
+</style>
+
+
+
+
+<h2 id="网站收藏"><a href="#网站收藏" class="headerlink" title="网站收藏"></a>网站收藏</h2><h3 id="自学推荐"><a href="#自学推荐" class="headerlink" title="自学推荐"></a>自学推荐</h3><h4 id="1-教程-工具"><a href="#1-教程-工具" class="headerlink" title="1. 教程/工具"></a><span id="inline-toc">1.</span> 教程/工具</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🚩万能命令</td>
+<td>含各大网站工具</td>
+<td><a href="https://wn.run/cn/">https://wn.run/cn/</a></td>
+</tr>
+<tr>
+<td>💡建筑极客</td>
+<td>Dynamo学习地址，大量教程</td>
+<td><a href="http://www.archgeek.org/">http://www.archgeek.org/</a></td>
+</tr>
+<tr>
+<td>🚩Dynamo官方学习文档</td>
+<td>Dynamo学习地址，大量教程</td>
+<td><a href="https://primer.dynamobim.org/zh-tw/07_Code-Block/7-3_shorthand.html">https://primer.dynamobim.org/zh-tw/07_Code-Block/7-3_shorthand.html</a></td>
+</tr>
+<tr>
+<td>🚩建标库</td>
+<td>设计规范，国家标准查看下载</td>
+<td><a href="http://www.jianbiaoku.com/content/downCHM.aspx">http://www.jianbiaoku.com/content/downCHM.aspx</a></td>
+</tr>
+<tr>
+<td>💡考试酷</td>
+<td>在线刷题，含大量证书/资格证题目</td>
+<td><a href="https://www.examcoo.com/index/ku">https://www.examcoo.com/index/ku</a></td>
+</tr>
+<tr>
+<td>💡资源库</td>
+<td>高中试题获取</td>
+<td><a href="http://www.ziyuanku.com/shiti/">http://www.ziyuanku.com/shiti/</a></td>
+</tr>
+</tbody></table>
+<h2 id="资源获取地址"><a href="#资源获取地址" class="headerlink" title="资源获取地址"></a>资源获取地址</h2><h3 id="图片资源"><a href="#图片资源" class="headerlink" title="图片资源"></a>图片资源</h3><h4 id="1-可商用图片资源获取"><a href="#1-可商用图片资源获取" class="headerlink" title="1.  可商用图片资源获取"></a><span id="inline-toc">1.</span>  可商用图片资源获取</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🚩 pixabay</td>
+<td><a href="https://pixabay.com/">https://pixabay.com/</a></td>
+</tr>
+<tr>
+<td>💡 别样网</td>
+<td><a href="https://www.ssyer.com/">https://www.ssyer.com/</a></td>
+</tr>
+<tr>
+<td>💡pexels</td>
+<td><a href="https://www.pexels.com/">https://www.pexels.com/</a></td>
+</tr>
+<tr>
+<td>💡Unsplash</td>
+<td><a href="https://unsplash.com/">https://unsplash.com/</a></td>
+</tr>
+<tr>
+<td>🚩背景纹理贴图</td>
+<td><a href="https://www.toptal.com/designers/subtlepatterns/">https://www.toptal.com/designers/subtlepatterns/</a></td>
+</tr>
+</tbody></table>
+<h4 id="2-高质量图片资源获取"><a href="#2-高质量图片资源获取" class="headerlink" title="2.  高质量图片资源获取"></a><span id="inline-toc">2.</span>  高质量图片资源获取</h4><p>&#8194;&#8194;&#8194;&#8194;以下地址需注意侵权问题😭</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡pinterest</td>
+<td><a href="https://www.pinterest.com/">https://www.pinterest.com/</a></td>
+</tr>
+<tr>
+<td>🚩高质量插图</td>
+<td><a href="http://pngimg.com">http://pngimg.com</a></td>
+</tr>
+<tr>
+<td>💡中文版500PX</td>
+<td><a href="https://500px.me/">https://500px.me/</a></td>
+</tr>
+<tr>
+<td>💡百万壁纸库</td>
+<td><a href="https://wall.alphacoders.com/finding_wallpapers.php?lang=Chinese">https://wall.alphacoders.com/finding_wallpapers.php?lang=Chinese</a></td>
+</tr>
+</tbody></table>
+<h4 id="3-在线图片工具"><a href="#3-在线图片工具" class="headerlink" title="3.  在线图片工具"></a><span id="inline-toc">3.</span>  在线图片工具</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡picdiet</td>
+<td>在线压缩图片工具,质量损失微乎其微</td>
+<td><a href="https://www.picdiet.com/zh-cn">https://www.picdiet.com/zh-cn</a></td>
+</tr>
+<tr>
+<td>💡Tinypng</td>
+<td>高质量图片大小压缩工具</td>
+<td><a href="https://tinypng.com/">https://tinypng.com/</a></td>
+</tr>
+<tr>
+<td>💡remove.bg</td>
+<td>在线抠图工具，扣除人物背景</td>
+<td><a href="https://www.remove.bg/">https://www.remove.bg/</a></td>
+</tr>
+<tr>
+<td>💡smartmockups</td>
+<td>在线样机生成图片</td>
+<td><a href="https://smartmockups.com">https://smartmockups.com</a></td>
+</tr>
+<tr>
+<td>💡图标云</td>
+<td>图标纹理背景制作</td>
+<td><a href="http://www.bgpatterns.com/">http://www.bgpatterns.com/</a></td>
+</tr>
+<tr>
+<td>💡美寄文字云</td>
+<td>文字云制作，可插入形状</td>
+<td><a href="https://www.moage.cn/w2a">https://www.moage.cn/w2a</a></td>
+</tr>
+<tr>
+<td>💡uigradients</td>
+<td>渐变色挑选，自制渐变背景</td>
+<td><a href="https://uigradients.com/#ServQuick">https://uigradients.com/#ServQuick</a></td>
+</tr>
+<tr>
+<td>🚩gradient</td>
+<td>自行调整渐变，并实时预览</td>
+<td><a href="https://gradient.shapefactory.co/">https://gradient.shapefactory.co/</a></td>
+</tr>
+<tr>
+<td>💡codepen.io</td>
+<td>各种炫光背景制作，适合封面背景</td>
+<td><a href="https://codepen.io/picks/pens/">https://codepen.io/picks/pens/</a></td>
+</tr>
+<tr>
+<td>💡Colorfavs</td>
+<td>插图图片获取配色</td>
+<td><a href="http://www.colorfavs.com">http://www.colorfavs.com</a></td>
+</tr>
+<tr>
+<td>推荐炫光1</td>
+<td>炫光生成器</td>
+<td><a href="https://codepen.io/tsuhre/full/BYbjyg">https://codepen.io/tsuhre/full/BYbjyg</a></td>
+</tr>
+<tr>
+<td>推荐炫光2</td>
+<td>炫光生成器</td>
+<td><a href="http://weavesilk.com/">http://weavesilk.com/</a></td>
+</tr>
+<tr>
+<td>推荐炫光3</td>
+<td>炫光生成器</td>
+<td><a href="https://wangyasai.github.io/Stars-Emmision/">https://wangyasai.github.io/Stars-Emmision/</a></td>
+</tr>
+<tr>
+<td>推荐炫光4</td>
+<td>炫光生成器</td>
+<td><a href="https://codepen.io/Yakudoo/full/rJjOJx/">https://codepen.io/Yakudoo/full/rJjOJx/</a></td>
+</tr>
+<tr>
+<td>做好图</td>
+<td>图片生成长图</td>
+<td><a href="http://zuohaotu.com/image-merge.aspx">http://zuohaotu.com/image-merge.aspx</a></td>
+</tr>
+<tr>
+<td>ARC官网</td>
+<td>腾讯人像修复，修图</td>
+<td><a href="https://arc.tencent.com/zh/ai-demos/faceRestoration">https://arc.tencent.com/zh/ai-demos/faceRestoration</a></td>
+</tr>
+<tr>
+<td>Bigjpg</td>
+<td>照片放大工具</td>
+<td><a href="https://bigjpg.com/">https://bigjpg.com/</a></td>
+</tr>
+<tr>
+<td>jpg-to-ico</td>
+<td>照片在线转ICO图标</td>
+<td><a href="https://www.aconvert.com/cn/icon/jpg-to-ico/">https://www.aconvert.com/cn/icon/jpg-to-ico/</a></td>
+</tr>
+</tbody></table>
+<p>&#8195;&#8195;&#8195;&#8195;</p>
+<h4 id="4-图床"><a href="#4-图床" class="headerlink" title="4.  图床"></a><span id="inline-toc">4.</span>  图床</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡微博图床</td>
+<td><a href="http://weibotuchuang.sinaapp.com/">http://weibotuchuang.sinaapp.com/</a></td>
+</tr>
+<tr>
+<td>💡SM.MS图床</td>
+<td><a href="https://sm.ms">https://sm.ms</a></td>
+</tr>
+<tr>
+<td>💡路过图床</td>
+<td><a href="https://imgse.com/">https://imgse.com/</a></td>
+</tr>
+</tbody></table>
+<h4 id="5-高级材质获取"><a href="#5-高级材质获取" class="headerlink" title="5.  高级材质获取"></a><span id="inline-toc">5.</span>  高级材质获取</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡Texture Haven</td>
+<td><a href="https://texturehaven.com/">https://texturehaven.com/</a></td>
+</tr>
+<tr>
+<td>💡Maxwell</td>
+<td><a href="http://maxwellrender.com/materials/">http://maxwellrender.com/materials/</a></td>
+</tr>
+<tr>
+<td>💡CC0</td>
+<td><a href="https://cc0textures.com/">https://cc0textures.com/</a></td>
+</tr>
+</tbody></table>
+<br>
+
+<h3 id="视频资源"><a href="#视频资源" class="headerlink" title="视频资源"></a>视频资源</h3><h4 id="1-无版权视频资源获取"><a href="#1-无版权视频资源获取" class="headerlink" title="1.  无版权视频资源获取"></a><span id="inline-toc">1.</span>  无版权视频资源获取</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡pexels</td>
+<td><a href="https://videos.pexels.com/">https://videos.pexels.com/</a></td>
+</tr>
+<tr>
+<td>💡motionbackgrounds</td>
+<td><a href="https://www.motionbackgroundsforfree.com/">https://www.motionbackgroundsforfree.com/</a></td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="2-高清4k电影资源下载"><a href="#2-高清4k电影资源下载" class="headerlink" title="2.  高清4k电影资源下载"></a><span id="inline-toc">2.</span>  高清4k电影资源下载</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡音范丝网站</td>
+<td><a href="https://www.yinfans.me">https://www.yinfans.me</a></td>
+</tr>
+</tbody></table>
+<h3 id="音频资源"><a href="#音频资源" class="headerlink" title="音频资源"></a>音频资源</h3><h4 id="1-音频外链获取"><a href="#1-音频外链获取" class="headerlink" title="1.  音频外链获取"></a><span id="inline-toc">1.</span>  音频外链获取</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>💡扬天音乐</td>
+<td><a href="http://www.ytmp3.cn/">http://www.ytmp3.cn/</a></td>
+</tr>
+<tr>
+<td>💡爱给网视频配乐</td>
+<td><a href="http://www.aigei.com/">http://www.aigei.com/</a></td>
+</tr>
+</tbody></table>
+<br>
+<br>
+<br>
+
+<div class="note info"><p>免责声明：本站仅属于个人收藏，仅供自用，本站不对任何工具担保，自取自用，后果自负！建议使用前杀毒！！！<br>部分内容来源于互联网，如有侵权请联删。</p></div>
+</div><nav id="pagination"><div class="pagination"></div></nav></article><div class="aside_content" id="aside_content"><div class="card_widget card-author"><div class="card-content"><div class="post_data"><div class="data-item is_center"><img class="lazyload avatar_img" src="/img/avatar.svg" onerror="onerror=null;src='/img/friend_404.gif'"><p class="author-info__name is_center">嗜血星空earth</p><p class="author-info__description is_center">没有永远的强者，只有不断的超越！</p></div></div><div class="post_data data_config"><div class="data-item is_center"><div class="data_link"><a href="/archives/"><p class="headline">文章</p><p class="length_num">46</p></a></div></div><div class="data-item is_center"><div class="data_link"><a href="/tags/"><p class="headline">标签</p><p class="length_num">45</p></a></div></div><div class="data-item is_center"><div class="data_link"><a href="/categories/"><p class="headline">分类</p><p class="length_num">13</p></a></div></div></div><div class="post_data is_center"><a class="data-item bookmark bookmarke--primary bookmark--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="post_data data_config"><div id="aside-social-icons"><a class="social-icon data-item" href="https://github.com/sxxkearth" target="_blank"><i class="fa fa-github"></i></a><a class="social-icon data-item" href="mailto:sxxkearth@qq.com" target="_blank"><i class="fa fa-envelope"></i></a><a class="social-icon data-item" href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a></div></div></div></div><div class="card_widget card-announcement"><div class="card-content"><div class="item_headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告<center><img src="/img/logo.svg" width="100" height="100" alt="sxxkearth logo"></span></div><div class="announcement_content">感謝訪問本站，若喜歡請收藏 ^_^</div></div></div><div class="card_widget card-recent-post"><div class="card-content"><div class="item_headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside_recent_item"><div class="aside_recent_post"><a href="/2023/10/16/Revit%E7%AE%A1%E9%81%93%E4%B8%8A%E5%8D%87%E4%B8%8B%E9%99%8D%E7%AC%A6%E5%8F%B7%E9%85%8D%E7%BD%AE/"><div class="aside_post_cover"><img class="aside_post_bg lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCnxWse.png" onerror="onerror=null;src='/img/404.jpg'" title="Revit管道上升下降符号配置"></div><div id="aside_title"><div class="aside_post_title" href="/2023/10/16/Revit%E7%AE%A1%E9%81%93%E4%B8%8A%E5%8D%87%E4%B8%8B%E9%99%8D%E7%AC%A6%E5%8F%B7%E9%85%8D%E7%BD%AE/" title="Revit管道上升下降符号配置">Revit管道上升下降符号配置</div><time class="aside_post_meta post-meta__date">2023-10-16</time></div></a></div><div class="aside_recent_post"><a href="/2023/10/12/Dynamo%E4%B8%ADList%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"><div class="aside_post_cover"><img class="aside_post_bg lazyload" data-src="https://i1.wp.com/archi-lab.net/wp-content/uploads/2014/11/182.jpg" onerror="onerror=null;src='/img/404.jpg'" title="Dynamo中List列表数据处理"></div><div id="aside_title"><div class="aside_post_title" href="/2023/10/12/Dynamo%E4%B8%ADList%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" title="Dynamo中List列表数据处理">Dynamo中List列表数据处理</div><time class="aside_post_meta post-meta__date">2023-10-12</time></div></a></div><div class="aside_recent_post"><a href="/2023/10/12/Excel%E5%8D%95%E5%85%83%E6%A0%BCRGB%E8%89%B2%E5%8F%B7%E5%A1%AB%E8%83%8C%E6%99%AF%E8%89%B2/"><div class="aside_post_cover"><img class="aside_post_bg lazyload" data-src="https://s1.ax1x.com/2023/06/20/pC8bfKK.png" onerror="onerror=null;src='/img/404.jpg'" title="Excel单元格RGB色号填背景色"></div><div id="aside_title"><div class="aside_post_title" href="/2023/10/12/Excel%E5%8D%95%E5%85%83%E6%A0%BCRGB%E8%89%B2%E5%8F%B7%E5%A1%AB%E8%83%8C%E6%99%AF%E8%89%B2/" title="Excel单元格RGB色号填背景色">Excel单元格RGB色号填背景色</div><time class="aside_post_meta post-meta__date">2023-10-12</time></div></a></div><div class="aside_recent_post"><a href="/2023/07/24/Revit%E8%AE%BE%E7%BD%AE%E6%9E%84%E4%BB%B6%E7%BC%96%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/"><div class="aside_post_cover"><img class="aside_post_bg lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCnxWse.png" onerror="onerror=null;src='/img/404.jpg'" title="Revit设置构件编码的方法"></div><div id="aside_title"><div class="aside_post_title" href="/2023/07/24/Revit%E8%AE%BE%E7%BD%AE%E6%9E%84%E4%BB%B6%E7%BC%96%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/" title="Revit设置构件编码的方法">Revit设置构件编码的方法</div><time class="aside_post_meta post-meta__date">2023-07-24</time></div></a></div><div class="aside_recent_post"><a href="/2023/06/27/ps%E7%BC%96%E8%BE%91ico%E5%9B%BE%E6%A0%87/"><div class="aside_post_cover"><img class="aside_post_bg lazyload" data-src="https://s1.ax1x.com/2023/06/28/pCdAfpQ.png" onerror="onerror=null;src='/img/404.jpg'" title="ps编辑ico图标"></div><div id="aside_title"><div class="aside_post_title" href="/2023/06/27/ps%E7%BC%96%E8%BE%91ico%E5%9B%BE%E6%A0%87/" title="ps编辑ico图标">ps编辑ico图标</div><time class="aside_post_meta post-meta__date">2023-06-27</time></div></a></div></div></div></div><div class="card_widget card-categories"><div class="card-content"><div class="item_headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="aside_category_item">       <li class="aside_category_list"><a class="aside_category_list_link" href="/categories/ArchLinux/"><span class="aside_category_list_name">ArchLinux</span><span class="aside_category_list_length">3</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/BIM/"><span class="aside_category_list_name">BIM</span><span class="aside_category_list_length">20</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/YOU/"><span class="aside_category_list_name">YOU</span><span class="aside_category_list_length">1</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/adobe/"><span class="aside_category_list_name">adobe</span><span class="aside_category_list_length">1</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/blog/"><span class="aside_category_list_name">blog</span><span class="aside_category_list_length">5</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/iOS/"><span class="aside_category_list_name">iOS</span><span class="aside_category_list_length">1</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/linux/"><span class="aside_category_list_name">linux</span><span class="aside_category_list_length">1</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/office/"><span class="aside_category_list_name">office</span><span class="aside_category_list_length">4</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/python/"><span class="aside_category_list_name">python</span><span class="aside_category_list_length">4</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/win/"><span class="aside_category_list_name">win</span><span class="aside_category_list_length">2</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/%E5%97%9C%E8%A1%80%E6%98%9F%E7%A9%BAearth/"><span class="aside_category_list_name">嗜血星空earth</span><span class="aside_category_list_length">1</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/%E6%BA%90%E7%A0%81/"><span class="aside_category_list_name">源码</span><span class="aside_category_list_length">1</span></a></li><li class="aside_category_list"><a class="aside_category_list_link" href="/categories/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"><span class="aside_category_list_name">系统安装</span><span class="aside_category_list_length">2</span></a></li></ul></div></div><div class="card_widget card-tags"><div class="card-content"><div class="item_headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/ArchLinux/" style="font-size: 18.67px; color: #666">ArchLinux</a> <a href="/tags/BIM/" style="font-size: 16px; color: #999">BIM</a> <a href="/tags/CAD/" style="font-size: 17.33px; color: #808080">CAD</a> <a href="/tags/Dynamo/" style="font-size: 16px; color: #999">Dynamo</a> <a href="/tags/Photoshop/" style="font-size: 16px; color: #999">Photoshop</a> <a href="/tags/Revit/" style="font-size: 22.67px; color: #1a1a1a">Revit</a> <a href="/tags/Revit%E9%93%BE%E6%8E%A5/" style="font-size: 16px; color: #999">Revit链接</a> <a href="/tags/Tkinter/" style="font-size: 17.33px; color: #808080">Tkinter</a> <a href="/tags/To-You/" style="font-size: 16px; color: #999">To You</a> <a href="/tags/css/" style="font-size: 17.33px; color: #808080">css</a> <a href="/tags/excel/" style="font-size: 18.67px; color: #666">excel</a> <a href="/tags/git/" style="font-size: 16px; color: #999">git</a> <a href="/tags/hexo%E5%8D%9A%E5%AE%A2/" style="font-size: 21.33px; color: #333">hexo博客</a> <a href="/tags/hexo%E6%95%99%E7%A8%8B/" style="font-size: 17.33px; color: #808080">hexo教程</a> <a href="/tags/iOS/" style="font-size: 16px; color: #999">iOS</a> <a href="/tags/office/" style="font-size: 20px; color: #4d4d4d">office</a> <a href="/tags/python/" style="font-size: 20px; color: #4d4d4d">python</a> <a href="/tags/wallpaper/" style="font-size: 16px; color: #999">wallpaper</a> <a href="/tags/win/" style="font-size: 17.33px; color: #808080">win</a> <a href="/tags/word/" style="font-size: 16px; color: #999">word</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 16px; color: #999">代码</a> <a href="/tags/%E4%BB%A3%E7%A0%81%E9%9B%86%E5%90%88/" style="font-size: 16px; color: #999">代码集合</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 20px; color: #4d4d4d">优化</a> <a href="/tags/%E5%88%97%E8%A1%A8/" style="font-size: 16px; color: #999">列表</a> <a href="/tags/%E5%8E%9F%E5%88%9B/" style="font-size: 24px; color: #000">原创</a> <a href="/tags/%E5%9C%9F%E6%96%B9/" style="font-size: 16px; color: #999">土方</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 16px; color: #999">壁纸</a> <a href="/tags/%E5%AD%97%E4%BD%93/" style="font-size: 16px; color: #999">字体</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E9%9B%86/" style="font-size: 16px; color: #999">工作集</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16px; color: #999">工具</a> <a href="/tags/%E6%8E%92%E7%89%88/" style="font-size: 17.33px; color: #808080">排版</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 16px; color: #999">插件</a> <a href="/tags/%E6%9C%BA%E7%94%B5/" style="font-size: 17.33px; color: #808080">机电</a> <a href="/tags/%E6%A0%B7%E5%BC%8F/" style="font-size: 16px; color: #999">样式</a> <a href="/tags/%E6%A5%BC%E6%A2%AF/" style="font-size: 16px; color: #999">楼梯</a> <a href="/tags/%E6%BA%90%E7%A0%81/" style="font-size: 20px; color: #4d4d4d">源码</a> <a href="/tags/%E7%8A%80%E7%89%9B/" style="font-size: 16px; color: #999">犀牛</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" style="font-size: 20px; color: #4d4d4d">系统安装</a> <a href="/tags/%E7%BB%93%E6%9E%84/" style="font-size: 16px; color: #999">结构</a> <a href="/tags/%E8%AF%BE%E8%A1%A8/" style="font-size: 16px; color: #999">课表</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 18.67px; color: #666">转载</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 16px; color: #999">软件</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E4%B9%A0/" style="font-size: 16px; color: #999">软件学习</a> <a href="/tags/%E8%BF%87%E6%BB%A4%E5%99%A8/" style="font-size: 16px; color: #999">过滤器</a> <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/" style="font-size: 16px; color: #999">黑苹果</a></div></div></div></div></div></div><footer id="footer" style="background-image: url(https://blog.wangyunzi.com/pCnjBy4.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 <i class="fa fa-star card-announcement-animation" aria-hidden="true" style="color:#ff0000"></i> 嗜血星空earth</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span><br><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> People  | 
+<i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> Time</a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script async src="/js/search/local-search.js"></script><script src="/js/baidupush.js"> </script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

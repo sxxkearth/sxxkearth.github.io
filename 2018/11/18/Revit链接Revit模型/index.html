@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Revit文件中链接Revit模型 | 嗜血星空earth</title><meta name="description" content="Revit文件中链接Revit模型"><meta name="keywords" content="原创,Revit,Revit链接"><meta name="author" content="嗜血星空earth"><meta name="copyright" content="嗜血星空earth"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="preconnect" href="//cdn.jsdelivr.net"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Revit文件中链接Revit模型"><meta name="twitter:description" content="Revit文件中链接Revit模型"><meta name="twitter:image" content="https://s1.ax1x.com/2023/06/14/pCnxWse.png"><meta property="og:type" content="article"><meta property="og:title" content="Revit文件中链接Revit模型"><meta property="og:url" content="http://sxxkearth.github.io/2018/11/18/Revit%E9%93%BE%E6%8E%A5Revit%E6%A8%A1%E5%9E%8B/"><meta property="og:site_name" content="嗜血星空earth"><meta property="og:description" content="Revit文件中链接Revit模型"><meta property="og:image" content="https://s1.ax1x.com/2023/06/14/pCnxWse.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="canonical" href="http://sxxkearth.github.io/2018/11/18/Revit%E9%93%BE%E6%8E%A5Revit%E6%A8%A1%E5%9E%8B/"><link rel="prev" title="Revit机电模型相关" href="http://sxxkearth.github.io/2018/11/28/Revit%E6%9C%BA%E7%94%B5%E7%9B%B8%E5%85%B3/"><link rel="next" title="Revit项目夹层视图设置" href="http://sxxkearth.github.io/2018/11/10/Revit%E5%A4%B9%E5%B1%82/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  copyright: {"languages":{"author":"作者: 嗜血星空earth","link":"链接: http://sxxkearth.github.io/2018/11/18/Revit%E9%93%BE%E6%8E%A5Revit%E6%A8%A1%E5%9E%8B/","source":"来源: 嗜血星空earth","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请附以署名及出处！"}},
+  copy_copyright_js: true,
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  medium_zoom: 'true',
+  Snackbar: undefined
+  
+}</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="嗜血星空earth" type="application/atom+xml">
+</head><body><div id="header"> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">嗜血星空earth</a></span><i class="fa fa-bars fa-fw toggle-menu pull_right close" aria-hidden="true"></i><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="lazyload avatar_img" src="/img/avatar.svg" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item is_center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">46</div></a></div></div><div class="mobile_data_item is_center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">45</div></a></div></div><div class="mobile_data_item is_center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">13</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-list"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heart" aria-hidden="true"></i><span> 收藏</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/collect/software/"><i class="fa-fw fa fa-windows"></i><span> 软件</span></a></li><li><a class="site-page" href="/collect/links/"><i class="fa-fw fa fa-link"></i><span> 地址</span></a></li><li><a class="site-page" href="/collect/photos/"><i class="fa-fw fa fa-photo"></i><span> 相册</span></a></li><li><a class="site-page" href="/collect/document/"><i class="fa-fw fa fa-book"></i><span> 文件</span></a></li><li><a class="site-page" href="/collect/passage/"><i class="fa-fw fa fa-pencil"></i><span> 文章</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-comment"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-user"></i><span> 关于</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E6%8F%92%E5%85%A5Revit%E9%93%BE%E6%8E%A5"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">插入Revit链接</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#Revit%E9%93%BE%E6%8E%A5%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">Revit链接的管理</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#%E7%AE%A1%E7%90%86%EF%BC%88%E5%90%8CCAD%EF%BC%89"><span class="toc_mobile_items-number">1.1.1.</span> <span class="toc_mobile_items-text">管理（同CAD）</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E5%A4%8D%E5%88%B6-%E7%9B%91%E8%A7%86%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">复制&#x2F;监视的使用</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">具体操作</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E7%9B%91%E8%A7%86%E5%8A%9F%E8%83%BD"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">监视功能</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#%E5%90%8C%E6%84%8F%E6%9B%B4%E6%94%B9%E5%9B%BE%E5%85%83"><span class="toc_mobile_items-number">3.1.</span> <span class="toc_mobile_items-text">同意更改图元</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#%E7%BB%91%E5%AE%9A%E9%93%BE%E6%8E%A5"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text">绑定链接</span></a></li></ol></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5Revit%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">插入Revit链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Revit%E9%93%BE%E6%8E%A5%E7%9A%84%E7%AE%A1%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">Revit链接的管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%EF%BC%88%E5%90%8CCAD%EF%BC%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">管理（同CAD）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6-%E7%9B%91%E8%A7%86%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">复制&#x2F;监视的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="toc-number">2.1.</span> <span class="toc-text">具体操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E8%A7%86%E5%8A%9F%E8%83%BD"><span class="toc-number">3.</span> <span class="toc-text">监视功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%84%8F%E6%9B%B4%E6%94%B9%E5%9B%BE%E5%85%83"><span class="toc-number">3.1.</span> <span class="toc-text">同意更改图元</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">绑定链接</span></a></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://s1.ax1x.com/2023/06/14/pCnxWse.png)"><div id="post-info"><div id="post-title"><div class="posttitle">Revit文件中链接Revit模型</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2018-11-18<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2023-06-14</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/BIM/">BIM</a></span><div class="post-meta-wordcount"><i class="fa fa-file-word-o post-meta__icon" aria-hidden="true"></i><span>字数总计: </span><span class="word-count">1.3k</span><span class="post-meta__separator">|</span><i class="fa fa-clock-o post-meta__icon" aria-hidden="true"></i><span>阅读时长: 3 分钟</span><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true">       </i><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner"><article id="post"><div class="article-container" id="post-content"><html><head></head><body><p>   前面<a href="http://sxxkearth.github.io/2018/10/22/Revit链接CAD图纸/">Revit链接CAD底图</a>的文章中写了Revit链接CAD底图的方式，及对链接的CAD进行简单的管理。本文内容将包括在Revit文件中链接Revit模型的方法，对模型的管理。以及通过链接进来的模型建立与该模型原点位置一致的标高轴网。</p>
+<!-- more -->
+
+<h2 id="插入Revit链接"><a href="#插入Revit链接" class="headerlink" title="插入Revit链接"></a>插入Revit链接</h2><p>  Revit链接插入的方法与链接CAD的方法一致，插入-链接Revit，选中需要链接的模型文件，以原点到原点插入即可。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlk6q1n9yj306a02xq2y.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlkde2t6ej30ex02zt8j.jpg" class="lazyload">
+
+<p>插入之后，即可在相应的视图中看到链接进来的模型。<br>为了防止插入之后的链接位置被意外移动，需要先对其进行锁定。快捷键<code>PN</code>。（或者选中链接后，修改–锁定）</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlkgl3k88j306p0290so.jpg" class="lazyload">
+
+<h3 id="Revit链接的管理"><a href="#Revit链接的管理" class="headerlink" title="Revit链接的管理"></a>Revit链接的管理</h3><p>  Revit链接的管理方法与CAD链接的管理方法基本一致，值得一提的是，管理下参照类型选项是Revit链接才有的。由下图可知，Revit链接有两种参照类型，分类为覆盖以及附着。</p>
+<ul>
+<li>覆盖：不带链接的模型中所链接的模型。eg：项目1文件中已经链接了项目3文件，接着将项目1链接进现在的项目2中的时候，不会将项目三中的内容链接进来。</li>
+<li>附着：携带链接的模型中所链接的模型。与覆盖相反。</li>
+</ul>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlkkza2v1j311r0lhjs0.jpg" class="lazyload">
+
+<h4 id="管理（同CAD）"><a href="#管理（同CAD）" class="headerlink" title="管理（同CAD）"></a>管理（同CAD）</h4><img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fwhao7z3vnj30ky030jr8.jpg" class="lazyload">
+
+<ul>
+<li>重新载入来自   ##用其他文件替换选中的现有链接</li>
+<li>重新载入       ##主要用当源cad图纸修改过后的刷新图纸以及对卸载图纸之后的重新载入。</li>
+<li>卸载图纸       ##暂时在文件中卸载图纸，相当于暂时不显示，等需要的时候按需重新载入即可</li>
+<li>导入           ##一般不用，即把原先插入的链接编成导入，导入后等同导入cad</li>
+<li>添加           ##添加新的链接，相当于链接cad选项</li>
+<li>删除           ##不过多解释，字面意思。</li>
+</ul>
+<h2 id="复制-监视的使用"><a href="#复制-监视的使用" class="headerlink" title="复制/监视的使用"></a>复制/监视的使用</h2><p>  复制/监视的功能在协作-复制监视选项卡下。如下图。在机电的项目中，机电的标高与建筑的标高一致。为保证两模型之间原点一致，以确保两模型链接在一起的时候能够完美吻合。因此，机电的标高及轴网通常会链接建筑的标高轴网进行复制监视的操作。同时，保留监视，一旦建筑的轴网/标高有更改，打开机电文件时也会收到相应的提示。以确保轴网的一致。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlkxdtzzwj30jb07n3z1.jpg" class="lazyload">
+
+
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>  复制/监视标高轴网的具体操作如下：（需要在可见的视图下操作，如标高在里面操作，轴网在平面操作，不同视图中图元的无法一起操作。）</p>
+<p>复制监视标高：</p>
+<ol>
+<li>切换到立面/剖面</li>
+<li>点击协作-复制/监视-选择链接-选择之前链接进来的文件</li>
+</ol>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxll7un7nbj306104nt8p.jpg" class="lazyload">
+
+<ol start="3">
+<li>选择复制/监视选项卡下的复制项，再勾选多个，批量选中所有标高，最后点击<code>多个</code>后面的完成，再点击复制选项卡下的完成即可。</li>
+</ol>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlldraqdzj309b03jdfx.jpg" class="lazyload">
+
+<p>复制监视轴网：轴网同上，在平面视图中操作即可。</p>
+<blockquote>
+<p>在点击第一个小完成之后，最后一个完成需要切换到上下文选项卡中的复制/监视选项卡下才可见</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlllf9ihbj309a03h74e.jpg" class="lazyload">
+
+
+<blockquote>
+<p>复制出来的标高/轴网监视状态会有如下的标志。不需要监视的话可选中不再监视的图元，在修改选项卡中停止监视。</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlln7lwfhj30hi0603yd.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxllp80v8sj305z03ct8q.jpg" class="lazyload">
+
+<h2 id="监视功能"><a href="#监视功能" class="headerlink" title="监视功能"></a>监视功能</h2><p>  保留监视的作用，在于当原文件即项目1文件图元发生变化的时候，打开项目二文件时会弹窗提示。在以上例子中，为建筑文件中标高/轴网发生变化，打开机电文件时会进行如下提示。</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxln8c10p5j30dc05qwee.jpg" class="lazyload">
+
+<blockquote>
+<p>例如此时轴网发生了变化，则出现上面提示打开之后会发现轴网与链接的不一致。</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlnaprv44j30ph09sglo.jpg" class="lazyload">
+
+<blockquote>
+<p>选中导入的链接，修改选项卡下协调查阅窗口中会显示变更的内容，如下图所示。</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlncx5sxpj30er074jrp.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlndk6aufj30hx0d2dfx.jpg" class="lazyload">
+
+<ul>
+<li>打开未解决选项卡下的+号，可以看出来时A跟B轴网的位置发生了改变。</li>
+<li>点击<code>轴网：轴网：B：ID 714140</code>或者<code>项目2.rvt：轴网：B：ID 313626</code>会选中该修改过的图元。</li>
+</ul>
+<h3 id="同意更改图元"><a href="#同意更改图元" class="headerlink" title="同意更改图元"></a>同意更改图元</h3><p>  根据需要可以选择是否更改本文件中的图元一致。在<code>已移动</code>的后面，<code>操作</code>栏，有一个选项卡，默认为推迟</p>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlnkr24kbj30h008kwem.jpg" class="lazyload">
+
+<ul>
+<li>推迟：暂不处理</li>
+<li>修改：自动修改至于链接文件一致</li>
+<li>拒绝：不进行任何操作</li>
+<li>接受差值：不进行更改</li>
+</ul>
+<blockquote>
+<p>拒绝选项效果与接受差值一致，均为不变化，但是会有新的拒绝分类，可以再次进行修改。推荐在不修改的情况下选拒绝。</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlnuyddkpj30h008kglm.jpg" class="lazyload">
+
+
+<h2 id="绑定链接"><a href="#绑定链接" class="headerlink" title="绑定链接"></a>绑定链接</h2><blockquote>
+<p>合并文件内容，合并的内容自成为模型组。会取消监视关系。<font color="red">无法撤销<font></font></font></p><font color="red"><font>
+</font></font></blockquote><font color="red"><font>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlnxhiz9yj30ec06odg3.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlo3buz1lj30a60553yf.jpg" class="lazyload">
+
+<blockquote>
+<p>选择了标高轴网会重新创建新的与原标高名称不同的标高跟轴网，如下图所示：</p>
+</blockquote>
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxlny2rjwtj308p062t8k.jpg" class="lazyload">
+
+<img data-src="http://ww1.sinaimg.cn/large/005NAGOVly1fxloc2jlcej30dt0cfa9z.jpg" class="lazyload">
+</font></font></body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">嗜血星空earth</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://sxxkearth.github.io/2018/11/18/Revit%E9%93%BE%E6%8E%A5Revit%E6%A8%A1%E5%9E%8B/">http://sxxkearth.github.io/2018/11/18/Revit%E9%93%BE%E6%8E%A5Revit%E6%A8%A1%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请附以署名及出处！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8E%9F%E5%88%9B/">原创    </a><a class="post-meta__tags" href="/tags/Revit/">Revit    </a><a class="post-meta__tags" href="/tags/Revit%E9%93%BE%E6%8E%A5/">Revit链接    </a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2023/06/14/pCnxWse.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2018/11/28/Revit%E6%9C%BA%E7%94%B5%E7%9B%B8%E5%85%B3/"><img class="prev_cover lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCnxWse.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Revit机电模型相关</span></div></a></div><div class="next-post pull_right"><a href="/2018/11/10/Revit%E5%A4%B9%E5%B1%82/"><img class="next_cover lazyload" data-src="https://s1.ax1x.com/2023/06/14/pCnxWse.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>Revit项目夹层视图设置</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'fooYzO3pQsH72XHHui9Z3OFZ-gzGzoHsz',
+  appKey:'1uB67kCqqPxsdg68UiuqZfEG',
+  placeholder:'留言无通知，需要回复请移步留言板留言，如需快速回复，请通过邮箱联系哦~ヾ(￣▽￣)',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'zh-cn',
+  recordIP: true
+});</script></div></div></div><footer id="footer" style="background-image: url(https://s1.ax1x.com/2023/06/14/pCnxWse.png)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 <i class="fa fa-star card-announcement-animation" aria-hidden="true" style="color:#ff0000"></i> 嗜血星空earth</div><div class="framework-info"><span>驱动 </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span><br><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> People  | 
+<i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> Time</a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script async src="/js/search/local-search.js"></script><script src="/js/baidupush.js"> </script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
