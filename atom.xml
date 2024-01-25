@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2023-10-16T11:14:32.000Z</updated>
+  <updated>2024-01-25T03:14:36.963Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Revit插件加载文件路径</title>
+    <link href="http://sxxkearth.github.io/2024/01/24/Revit%E6%8F%92%E4%BB%B6%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/"/>
+    <id>http://sxxkearth.github.io/2024/01/24/Revit%E6%8F%92%E4%BB%B6%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/</id>
+    <published>2024-01-24T12:00:28.000Z</published>
+    <updated>2024-01-25T03:14:36.963Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  Revit软件中，插件加载需要在特定的位置有加载文件，加在文件可以为<code>.bundle</code>或<code>.addin</code>文件，管理插件时可以对这些文件进行更改，也可以使用<code>AddInManager</code>软件进行管理；</p><!-- more --><h1 id="addin插件加载地址"><a href="#addin插件加载地址" class="headerlink" title="addin插件加载地址"></a>addin插件加载地址</h1><p>Revit插件加载文件的常见路径及格式；</p><h2 id="路径一"><a href="#路径一" class="headerlink" title="路径一"></a>路径一</h2><p>路径一：<code>C:\ProgramData\Autodesk\ApplicationPlugins</code></p><p>文件样式为<code>.bundle</code>的文件夹，如下图所示：</p><p><img alt="Untitled" data-src="https://s11.ax1x.com/2024/01/25/pFmukHP.png" class="lazyload"></p><h2 id="路径二"><a href="#路径二" class="headerlink" title="路径二"></a>路径二</h2><p>路径二：<code>C:\Users\Administrator\AppData\Roaming\Autodesk\Revit\Addins</code></p><p>文件样式为分软件版本，下面内容为<code>.bundle</code>格式文件配相应的文件夹如下所示：</p><p><img alt="Untitled" data-src="https://s11.ax1x.com/2024/01/25/pFmuEAf.png" class="lazyload"></p><p><img alt="Untitled" data-src="https://s11.ax1x.com/2024/01/25/pFmuVN8.png" class="lazyload"></p><h2 id="路径三"><a href="#路径三" class="headerlink" title="路径三"></a>路径三</h2><p>路径三：<code>C:\ProgramData\Autodesk\Revit\Addins</code></p><p>文件样式为分软件版本，下面内容为单个的<code>.addin</code>文件，部分包含文件夹；</p><p><img alt="ADDINS路径" data-src="https://s11.ax1x.com/2024/01/25/pFmuZ4S.png" class="lazyload"></p><p><img alt="addins文件内容" data-src="https://s11.ax1x.com/2024/01/25/pFmuKjs.png" class="lazyload"></p><h1 id="addin插件管理软件"><a href="#addin插件管理软件" class="headerlink" title="addin插件管理软件"></a>addin插件管理软件</h1><p>可针对不同版本的Revit软件，选中加载项，点击启用/禁用对插件进行管理；</p><p><img alt="软件管理" data-src="https://s11.ax1x.com/2024/01/25/pFmucCD.png" class="lazyload"></p><p><a href="https://wwhb.lanzn.com/izJJ404yvywb">AddInManager插件下载</a></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      true
+    
+    </summary>
+    
+    
+      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
+    
+  </entry>
   
   <entry>
     <title>Revit管道上升下降符号配置</title>
@@ -516,35 +541,6 @@
       <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Next修改表格样式</title>
-    <link href="http://sxxkearth.github.io/2019/08/10/Next%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F/"/>
-    <id>http://sxxkearth.github.io/2019/08/10/Next%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F/</id>
-    <published>2019-08-10T12:01:28.000Z</published>
-    <updated>2023-06-14T14:08:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  出于对Next主题中自带表格灰白条纹的无限嫌弃，以及Markdown语法中无法对表格整体宽度进行限制，故通过css对表格属性进行额外的设置。包含表格背景颜色、宽度、边框线宽度及颜色、整体宽度及位置等进行设置。</p><!-- more --><h2 id="1-插入位置"><a href="#1-插入位置" class="headerlink" title="1.插入位置"></a><span id="inline-toc">1.</span>插入位置</h2><p>  出于对不同表格可能有不同需求的情况，仅针对单篇文章进行设置。故配置代码放置于需要设置的<code>.md</code> 文件内。如下图所示。</p><img alt="放置位置" data-src="http://ww1.sinaimg.cn/large/005NAGOVgy1g5utkzack4j30h70bdq3q.jpg" class="lazyload"><h2 id="2-源代码"><a href="#2-源代码" class="headerlink" title="2.源代码"></a><span id="inline-toc">2.</span>源代码</h2><figure class="highlight styl"><figcaption><span>文件位置：~source\_posts\xxx.md</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-tag">th</span>, <span class="selector-tag">td</span> {</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;        ##表格横线宽度及配色</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#eee</span>;         ##表格竖线宽度及配色</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fff</span>;               ##单元格背景颜色</span><br><span class="line">}</span><br><span class="line"><span class="selector-tag">table</span> {</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;                            ##表格整体宽度占比</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;                ##表格外边框宽度及颜色</span><br><span class="line">    <span class="attribute">margin</span>: auto;                          ##表格在页面中的位置</span><br><span class="line">}</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure><h2 id="3-代码示意"><a href="#3-代码示意" class="headerlink" title="3.代码示意"></a><span id="inline-toc">3.</span>代码示意</h2><p>  其中<code>&lt;style&gt; &lt;/style&gt;</code> 为引入某一样式。 属于html中的样式引入。其余内容，均取自原样式表中。可从浏览器<code>F12</code> 下styles中提取。可先在浏览器中进行测试。如下图所示。</p><img data-src="http://ww1.sinaimg.cn/large/005NAGOVgy1g5utxirkxxj30g30bidgu.jpg" class="lazyload"><h2 id="4-参考链接"><a href="#4-参考链接" class="headerlink" title="4.参考链接"></a><span id="inline-toc">4.</span>参考链接</h2><p>W3school中：<a href="https://www.w3school.com.cn/css/css_table.asp">css表格</a></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://sxxkearth.github.io/categories/blog/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="hexo博客" scheme="http://sxxkearth.github.io/tags/hexo%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="优化" scheme="http://sxxkearth.github.io/tags/%E4%BC%98%E5%8C%96/"/>
-    
-      <category term="样式" scheme="http://sxxkearth.github.io/tags/%E6%A0%B7%E5%BC%8F/"/>
     
   </entry>
   
