@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2024-01-25T03:14:36.963Z</updated>
+  <updated>2024-02-05T08:06:31.042Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用QQ影音实现视频快速生成GIF</title>
+    <link href="http://sxxkearth.github.io/2024/02/05/%E4%BD%BF%E7%94%A8QQ%E5%BD%B1%E9%9F%B3%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90GIF/"/>
+    <id>http://sxxkearth.github.io/2024/02/05/%E4%BD%BF%E7%94%A8QQ%E5%BD%B1%E9%9F%B3%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90GIF/</id>
+    <published>2024-02-05T07:47:28.000Z</published>
+    <updated>2024-02-05T08:06:31.042Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  在有视频截取部分内容转为GIF动图用于PPT演示时，可使用QQ影音工具对视频进行部分截取，并生成GIF动图文件；允许最大长度为20s，基本能够满足使用需求；</p><!-- more --><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p> 使用QQ影音打开所需的视频文件；点击播放窗口右小角的<code>设置</code>按钮，可看到GIF<code>动画</code>入口；点击即可进入动画截图页面；</p><p><img alt="进入动画截图页面" data-src="https://s11.ax1x.com/2024/02/05/pFlLY4I.png" class="lazyload"></p><p>在动画截图窗口中，选择需要使用的动画范围，最大长度为20s，按需要选择<code>动画尺寸</code>及<code>动画速度</code>，确定后点击<code>保存GIF</code>即可；</p><p><img alt="保存GIF" data-src="https://s11.ax1x.com/2024/02/05/pFlL0KS.png" class="lazyload"></p><h2 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h2><p>点此下载<a href="https://wwb.lanzn.com/iZwsH1mqoida">QQ影音4.6.3.1104绿色精简版</a>；</p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      true
+    
+    </summary>
+    
+    
+      <category term="win" scheme="http://sxxkearth.github.io/categories/win/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="win" scheme="http://sxxkearth.github.io/tags/win/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BIM工作电脑系统封装软件配置</title>
+    <link href="http://sxxkearth.github.io/2024/02/05/BIM%E5%B7%A5%E4%BD%9C%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F%E5%B0%81%E8%A3%85%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/"/>
+    <id>http://sxxkearth.github.io/2024/02/05/BIM%E5%B7%A5%E4%BD%9C%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F%E5%B0%81%E8%A3%85%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/</id>
+    <published>2024-02-05T01:27:28.000Z</published>
+    <updated>2024-02-05T07:50:30.391Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  偶尔因系统奔溃或其他软件问题需要重装系统，为压缩软件配置时间，提升系统重装效率，备份了一个拥有常用软件的系统；以下为本人目前封装系统中的软件配置列表；基于Windows 11系统，仅供参考；</p><!-- more --><h2 id="预装软件列表"><a href="#预装软件列表" class="headerlink" title="预装软件列表"></a>预装软件列表</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">##############################################</span><br><span class="line">#####   嗜血星空earth-Windows 11 系统 软件配置     #######</span><br><span class="line">##############################################</span><br><span class="line">--------------------------------------------------------</span><br><span class="line">####################################</span><br><span class="line">#####                     常规软件                   #######</span><br><span class="line">####################################</span><br><span class="line">安卓子系统</span><br><span class="line">火绒安全</span><br><span class="line">360极速浏览器</span><br><span class="line">QQ</span><br><span class="line">微信</span><br><span class="line">notion</span><br><span class="line">Everything</span><br><span class="line">GeekUninstaller</span><br><span class="line">PotPlayer</span><br><span class="line">Snipaste</span><br><span class="line">Pointofix(屏幕绘图)</span><br><span class="line">Total Commander</span><br><span class="line">v2rayN</span><br><span class="line">视频无损压缩</span><br><span class="line">XMind ZEN</span><br><span class="line">Typora</span><br><span class="line">OBS Studio</span><br><span class="line">Camtasia Studio 8</span><br><span class="line">鲁大师单文件</span><br><span class="line">向日葵远程</span><br><span class="line">PDF解密软件</span><br><span class="line">Foxit PDF Editor Pro 2023</span><br><span class="line">DG分区工具</span><br><span class="line">GifCam 动图录制</span><br><span class="line">录屏按键显示</span><br><span class="line">百度网盘</span><br><span class="line">天若OCR文字识别本地版</span><br><span class="line">SpaceSniffer 大文件查看</span><br><span class="line">亿图图示12.6</span><br><span class="line">itunes</span><br><span class="line">爱思助手</span><br><span class="line">IDM</span><br><span class="line">PyCharm 2023.1.2</span><br><span class="line">Git</span><br><span class="line">Nodejs</span><br><span class="line"></span><br><span class="line">####################################</span><br><span class="line">#####                     办公软件                   #######</span><br><span class="line">####################################</span><br><span class="line">CAD快速看图</span><br><span class="line">AddInManager插件加载管理工具</span><br><span class="line">优比Revit版本查看工具</span><br><span class="line">Office 365 专业增强版</span><br><span class="line">清理Revit主视图上最近使用的文件记录</span><br><span class="line">iSlide 插件</span><br><span class="line">CAD 版本转换AcmeCAD</span><br><span class="line">SU版本转换</span><br><span class="line">---------------------------------------</span><br><span class="line">SketchUp 2023</span><br><span class="line">Autodesk CAD 2014</span><br><span class="line">Autodesk Revit 2016</span><br><span class="line">Autodesk Revit 2017</span><br><span class="line">Autodesk Revit 2018</span><br><span class="line">Autodesk Revit 2019</span><br><span class="line">Autodesk Revit_2019_2_5补丁包</span><br><span class="line">Autodesk Revit 2020</span><br><span class="line">Autodesk Revit 2021</span><br><span class="line">Autodesk Revit 2022--暂未激活</span><br><span class="line">Autodesk Navisworks 2019</span><br><span class="line">Autodesk Navisworks Exporters 2019</span><br><span class="line">Autodesk Navisworks Exporters 2020</span><br><span class="line">---------------------------------------</span><br><span class="line">Dynamo2.0.4适配17~19版本</span><br><span class="line">Dynamo2.0.X Clockwork for Dynamo 2.x</span><br><span class="line">Dynamo2.0.X Data-Shape</span><br><span class="line">Dynamo2.0.X Genius Loci</span><br><span class="line">Dynamo2.0.X MEPover</span><br><span class="line">Dynamo2.0.X Orchid</span><br><span class="line">Dynamo2.0.X spring nodes</span><br><span class="line">----------------------------------------</span><br><span class="line">LumionLiveSync</span><br><span class="line">DiRoots.One 13汉化版 18~24</span><br><span class="line">橄榄山快模 22.08</span><br><span class="line">Twinmotion导出插件 18~22</span><br><span class="line">---------------------------------------</span><br><span class="line">Adobe Photoshop CC 2019</span><br><span class="line">Adobe Illustrator CC 2019</span><br><span class="line">Adobe Premiere Pro CC 2019</span><br><span class="line">CameraRaw滤镜插件</span><br><span class="line">ICOFormat64.8bi 编辑ico插件</span><br><span class="line">剪映</span><br><span class="line">SrtEditPortable字幕编辑</span><br><span class="line">360全景图片查看器</span><br><span class="line">Lumion 8.0</span><br><span class="line">####################################</span><br><span class="line">#####                     字体                          #######</span><br><span class="line">####################################</span><br><span class="line">方正大黑简体</span><br><span class="line">庞门正道标题体2.0增强版</span><br><span class="line">庞门正道粗书体</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure><h2 id="桌面效果"><a href="#桌面效果" class="headerlink" title="桌面效果"></a>桌面效果</h2><p><img alt="桌面效果" data-src="https://s11.ax1x.com/2024/02/05/pFl5gdP.png" class="lazyload"></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      true
+    
+    </summary>
+    
+    
+      <category term="win" scheme="http://sxxkearth.github.io/categories/win/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="win" scheme="http://sxxkearth.github.io/tags/win/"/>
+    
+  </entry>
   
   <entry>
     <title>Revit插件加载文件路径</title>
@@ -489,58 +539,6 @@
       <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="win" scheme="http://sxxkearth.github.io/tags/win/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Revit工作集</title>
-    <link href="http://sxxkearth.github.io/2019/10/19/Revit%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C/"/>
-    <id>http://sxxkearth.github.io/2019/10/19/Revit%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C/</id>
-    <published>2019-10-19T06:50:57.000Z</published>
-    <updated>2023-06-14T14:03:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>   Revit中有两种常用的协同工作方式：1、链接文件。 2、工作集。 链接文件主要是分专业/分区域建模，然后通过链接Revit文件实现协同。链接文件相当于CAD中的参照，无法对链接进来的Revit文件修改。适合项目文件体积较大时使用，相对简单粗暴。本文主要描述Revit工作集协同方式。</p><!-- more --><p>  工作集： 为项目创建中心文件，中心文件放置于所有人都能打开的服务器路径上，其他人员均以中心文件创建自己的本地文件进行编辑。创建中心文件的Revit用户，拥有更改所有权限的权力。工作集的方法能够在请求求得对方同意的情况下对他人的内容进行修改。</p><h2 id="工作集文件架构"><a href="#工作集文件架构" class="headerlink" title="工作集文件架构"></a>工作集文件架构</h2><img data-src="https://i.loli.net/2019/10/19/PZoUFxymgv5wuiQ.png" class="lazyload"><p>  工作集的架构如上所示。由中心文件，及各工作人员新建的本地文件组成。中心文件用于对用户权限的修改，最终项目成果出于中心文件。本地文件用于各不同专业/不同内容由不同的人进行编辑，而后同步至中心文件当中。中心文件位于服务器中，本地文件可位于服务器路径，也可位于本地路径。</p><h3 id="中心文件文件夹架构如下图所示："><a href="#中心文件文件夹架构如下图所示：" class="headerlink" title="中心文件文件夹架构如下图所示："></a>中心文件文件夹架构如下图所示：</h3><img data-src="https://i.loli.net/2019/10/19/Ixa637nV54wt1eE.png" class="lazyload"><h3 id="本地文件文件夹架构如下图所示："><a href="#本地文件文件夹架构如下图所示：" class="headerlink" title="本地文件文件夹架构如下图所示："></a>本地文件文件夹架构如下图所示：</h3><img data-src="https://i.loli.net/2019/10/19/TqC8iwWYNDK7EL6.png" class="lazyload"><div class="note info"><p>由上可看出，中心文件比本地文件多了一个temp临时文件夹。可以由此区分中心文件与本地文件。</p></div><h2 id="Revit用户"><a href="#Revit用户" class="headerlink" title="Revit用户"></a>Revit用户</h2><p>   工作集模式有多个工作集，工作集的所有者以Revit用户命名。默认Revit用户名同电脑用户名。在打开有工作集的文件是，软件会自动根据用户名管理你的操作权限。为方便日后工作，Revit用户名宜为自己的名字/专业。可在打开文件之前在<code>左上角-文件</code>—— <code>选项</code> 中修改。</p><img data-src="https://i.loli.net/2019/10/19/q1f4l3vFW5wdJ8T.png" class="lazyload"><h2 id="新建工作集"><a href="#新建工作集" class="headerlink" title="新建工作集"></a>新建工作集</h2><h3 id="建立中心文件"><a href="#建立中心文件" class="headerlink" title="建立中心文件"></a>建立中心文件</h3><p>   没有创建工作集的项目，可在协作——工作集下创建新的中心文件。点击之后会有下图右侧的弹窗。系统会默认建立共享标高和轴网工作集，其他图元根据需要重新命名，在此以建筑为例。</p><img data-src="https://i.loli.net/2019/10/19/2cVabXnmCL7jfo5.png" class="lazyload"><p>  创建好工作集之后，将文件另存为到服务器路径下的中心文件文件夹中，同步并保存一次即可。<br>  中心文件另存为时可在选项中设置文件的最大备份数/默认打开的工作集，如下图所示：</p><img data-src="https://i.loli.net/2019/10/19/yDkzMOLSYufgdqo.png" class="lazyload"><ul><li>最大备份数：即：xxx001.rvt, xxx002.rvt,一般3-5即可。</li><li>打开默认工作集：为保证打开速度，一般设置为指定..。</li><li>略缩图预览：为保证打开速度，一般为平面视图/图纸。</li></ul><h3 id="建立本地文件"><a href="#建立本地文件" class="headerlink" title="建立本地文件"></a>建立本地文件</h3><p>  打开Revit，在软件启动界面，选择<code>打开——路径</code>中找到中心文件，选中——<code>勾选新建本地文件</code> ——打开——新建属于自己的工作集eg：机电——另存到自己的本地文件目录下即可。在此打开的下拉菜单中可对之前中心文件另存为时选项下设置的默认打开工作及进行更改。</p><img data-src="https://i.loli.net/2019/10/19/9Ajb8TpxuSVWa7Q.png" class="lazyload"><h3 id="中心文件与本地文件的差别"><a href="#中心文件与本地文件的差别" class="headerlink" title="中心文件与本地文件的差别"></a>中心文件与本地文件的差别</h3><ul><li>中心文件与本地文件文件夹架构不一样，中心文件中多了一个缓存文件。</li><li>中心文件与本地文件打开浏览路径下的选项不一致。如下所示：中心文件有新建本地文件选项。</li><li>打开中心文件未勾选新建本地文件时，中心文件无保存按钮。当勾选新建本地文件是，保存按钮用于保存本地文件。在打开中心文件为了修改工作集权限时，不勾选新建本地文件。</li></ul><img data-src="https://i.loli.net/2019/10/19/UIBQe8h6dWxLHnF.png" class="lazyload"><h2 id="管理工作集"><a href="#管理工作集" class="headerlink" title="管理工作集"></a>管理工作集</h2><p>  中心文件中可以对所有权限进行更改。<br>  创建工作集之后，可以在工作集窗口清楚的看到所有工作集的状态，包括是否可编辑，所有者，借用者，是否打开，是否可见等状态。如下图所示：</p><img data-src="https://i.loli.net/2019/10/19/OJaIYim4KkuLvtg.png" class="lazyload"><ul><li>可编辑：在中心文件中/所有者为自己的工作集可对此项更改，此项将更改工作集的所有者。</li><li>所有者：所有者是你工作集下的构件，可对其进行删除/修改/添加。否择无法删除/修改。</li><li>借用者：你请求删除/修改别人工作集下的构件，并征得对方同意后，该构件即被你借用，对方工作集后面便会显示你为借用者。借用针对的是某一构件，并不是整个工作集。被你借用后，在你修改并同步之前，对方无法对被借用的图元进行修改。</li><li>已打开：类似是否载入。只有当已打开选项为是，且在所有视图中显示为√时，工作集的内容才可见。</li><li>在所有视图中显示：可见性设置，只有当已打开选项为是，且在所有视图中显示为√时，工作集的内容才可见。</li></ul><p>   右侧栏及下方的显示栏中同样也可以对工作集的状态进行更改。包括建立新的工作集，删除/重命名/编辑状态等。下方的显示菜单中，可以按照项目标准/族/视图的相关规则定义某标准/某族/某视图的所有者。</p><img data-src="https://i.loli.net/2019/10/19/rYMLPzit4gKDf6o.png" class="lazyload"><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>  1、    打开中心文件时，若未勾选新建本地文件选项，中心文件中没有本地保存的按钮，只有同步键，用于管理权限。 不能进行本地保存。在勾选新建本地文件时，保存用于保存本地文件的位置。</p><img data-src="https://i.loli.net/2019/10/19/E6Ir2DjxsRoavPf.png" class="lazyload"><p>  2、下方的选项为活动工作集选项，即：此框中显示的哪个工作集，后面绘制的图元便在哪一个工作集下。注：如下图所示，现为建筑人员打开建筑本地文件，故机电即标高轴网为不可编辑状态，若此时选择机电（不可编辑）为活动工作集，或者选中某图元将其工作集切换至机电工作集，新的图元都会出现在机电工作集中，且机电人员打开机电文件时不会有任何提示。因此为保证模型的准确性，建模时切记选择自己的工作集为活动工作集。</p><img data-src="https://i.loli.net/2019/10/19/rlyH2K7uB9azcnU.png" class="lazyload"><p>  3、    工作集环境下，只有在你删除/修改别人的工作集中原本存在构件时才会提示无法删除/修改的提示。对于你往其他工作集中放置物件是不会有提示的。且，例如当建筑新绘制了管道，并将其切换至机电工作集，只有在建筑同步之后，建筑文件中对刚刚自己新绘制的管道编辑才会有提示，未同步的时候没有任何提示。<br>  4、    将其他工作集中的构件，切换到自己的工作集之中，需要请求对方的同意。自己新建的构件，在未进行同步的时候可随意切换工作集。<br>  5、    自己工作集的内容给对方，不需要对方同意。<br>  6、    在编辑其他工作集下的内容时，会提示发送放置请求，在对方未处理消息时，还不能对该图元进行更改。发送放置请求之后，对方打开文件时会出现如下弹窗。弹窗持续时间不长，若被对方忽略，自己这边收不到任何提示，因此在向对方发送编辑请求之后最后告知对方。</p><img data-src="https://i.loli.net/2019/10/19/DFLISVpoXlgQyba.png" class="lazyload"><p>  7、    在对方批准你修改之后，你可以对该构件进行修改，在工作集窗口中会有机电后面会有你是借用者的标注，在你对其构件进行修改同步之后，借用权限自动关闭。<br>  8、    对方批准你修改之后，你可以对该构件进行修改，未修改完成时切记不要同步，同步之后要修改需要重新请求对方同意。<br>  9、    当你的构件被他人借用时，你无法对被借用的构件进行修改。直到对方修改同步之后，你也重新同步。<br>  10、    当对方对你的构件进行了修改，你打开文件时会有如下提示。此时重新同步即可。</p><img data-src="https://i.loli.net/2019/10/19/ka7ZQnqEILNMY98.png" class="lazyload"><p>  11、    当建筑人员打开机电人员文件时，会收到如上提示。<br>  12、    在工作集各权限出现问题的时候，一般由管理员在中心文件中释放权限，再重新获取。</p><div class="note danger"><p>工作集管理操作主要针对双方同时打开各自文件的情况，且尚未完全成熟，特别是在你操作时对方未打开文件的情况下，未收到提示是常用的事，故还是要多沟通交流。</p></div></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
-    
-      <category term="工作集" scheme="http://sxxkearth.github.io/tags/%E5%B7%A5%E4%BD%9C%E9%9B%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Revit项目基点与测量点设置</title>
-    <link href="http://sxxkearth.github.io/2019/09/21/Revit%E9%A1%B9%E7%9B%AE%E5%9F%BA%E7%82%B9%E4%B8%8E%E6%B5%8B%E9%87%8F%E7%82%B9/"/>
-    <id>http://sxxkearth.github.io/2019/09/21/Revit%E9%A1%B9%E7%9B%AE%E5%9F%BA%E7%82%B9%E4%B8%8E%E6%B5%8B%E9%87%8F%E7%82%B9/</id>
-    <published>2019-09-21T10:40:28.000Z</published>
-    <updated>2023-06-14T14:03:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>   在Revit场地视图下可以对项目基点以及测量点进行设置，确保项目位置/坐标正确性。转到场地视图，默认新文件下项目基点与项目原点在同一位置（重合），如下图所示：（圆形样式的为项目基点，三角形样式的为测量点。）在回形针图标无斜杠的情况下，测量点的移动会造成原点坐标的变化。</p><!-- more --><img data-src="https://i.loli.net/2019/10/19/xZqDKnuvlYaFG4i.png" class="lazyload"><h2 id="项目基点（原点）的设置"><a href="#项目基点（原点）的设置" class="headerlink" title="项目基点（原点）的设置"></a>项目基点（原点）的设置</h2><p>  构件与项目基点（项目原点）之间有着强烈的相对关系，移动项目基点，所有已绘制的构件都会随之移动。</p><ul><li>链接场地cad图纸（若场地cad图纸中单位为m，则链接时单位选择米，否择为mm。）选中项目基点，点击回形针样式图标，将回形针样式图标改为如下图模式。</li><li>移动到已知坐标点的任一位置</li><li>再次点击回形针样式图标恢复成没有红色斜杠的状态</li><li>输入相应的坐标值（北/南对应X轴，东/西对应Y轴）</li><li>结果如下所示：（注意单位的变化）</li></ul><img data-src="https://i.loli.net/2019/10/19/IHasd71qDwzMGel.png" class="lazyload"><h2 id="测量点的设置"><a href="#测量点的设置" class="headerlink" title="测量点的设置"></a>测量点的设置</h2><p>  测量点的设置与原点稍有不同。初始位置，点击回形针图标之后，直接输入下一点测量点的坐标，如果前面操作没有问题的话，测量点会与底图上标注的该点的位置重合。最后恢复回形针的状态为无红色斜杠即可。</p><h2 id="设置成功效果图："><a href="#设置成功效果图：" class="headerlink" title="设置成功效果图："></a>设置成功效果图：</h2><img data-src="https://i.loli.net/2019/10/19/clqSa7UvfesE1Ao.png" class="lazyload"></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
     
   </entry>
   
