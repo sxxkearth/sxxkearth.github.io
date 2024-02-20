@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2024-02-05T08:06:31.042Z</updated>
+  <updated>2024-02-20T08:53:26.080Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Revit批量新建族类型</title>
+    <link href="http://sxxkearth.github.io/2024/02/19/Revit%E6%89%B9%E9%87%8F%E6%96%B0%E5%BB%BA%E6%97%8F%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://sxxkearth.github.io/2024/02/19/Revit%E6%89%B9%E9%87%8F%E6%96%B0%E5%BB%BA%E6%97%8F%E7%B1%BB%E5%9E%8B/</id>
+    <published>2024-02-19T14:30:28.000Z</published>
+    <updated>2024-02-20T08:53:26.080Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  通过导出族类型txt，在txt文件中复制补充字段添加不同的族类型，在载入时可自选需要的族类型；txt的内容可复制进到excel表中进行编辑，实现快速添加，提高族类型新建效率；</p><!-- more --><h2 id="导出族类型"><a href="#导出族类型" class="headerlink" title="导出族类型"></a>导出族类型</h2><p>Revit软件中，在族编辑界面，点击<code>文件</code>-<code>导出</code>-<code>族类型</code>，可将族类型信息导出到<code>txt</code>文件中；</p><p><img alt="导出选项" data-src="https://s11.ax1x.com/2024/02/20/pFYq7Hf.png" class="lazyload"></p><p>导出的族类型信息文件与该族文件路径，名称一致，格式为<code>txt</code>；</p><p><img alt="导出后样式" data-src="https://s11.ax1x.com/2024/02/20/pFYqj3j.png" class="lazyload"></p><p>导出后的族类型txt示例：</p><p><img alt="示例" data-src="https://s11.ax1x.com/2024/02/20/pFYLPET.png" class="lazyload"></p><h2 id="编辑族类型txt"><a href="#编辑族类型txt" class="headerlink" title="编辑族类型txt"></a>编辑族类型txt</h2><p>打开excel，将txt内容复制进excel表格中；</p><p><img alt="表格示例" data-src="https://s11.ax1x.com/2024/02/20/pFYLnDx.png" class="lazyload"></p><p>默认数据均在第一列放置，为便于编辑，对数据进行分列；选中第一列，点击<code>数据</code>-<code>分列</code>-<code>分隔符号</code>-<code>逗号</code>进行分列；</p><p><img alt="拆分列" data-src="https://s11.ax1x.com/2024/02/20/pFYL88H.png" class="lazyload"></p><p>分列后效果如下，A列为类型名称，其余列分别对应各个参数名称及参数值，数据可直接在此excel表中进行编辑；</p><p><img alt="分列后" data-src="https://s11.ax1x.com/2024/02/20/pFYLJxA.png" class="lazyload"></p><p>编辑完成后，点击<code>文件</code>-<code>另存为</code>，保存类型修改为CSV格式文件；最后将此csv文件的后缀<code>.csv</code>修改为<code>.txt</code>即可；</p><p><img alt="CSV" data-src="https://s11.ax1x.com/2024/02/20/pFYLNrt.png" class="lazyload"></p><p>修改后的txt示例；</p><p><img alt="修改后" data-src="https://s11.ax1x.com/2024/02/20/pFYLwa8.png" class="lazyload"></p><h2 id="多类型导入"><a href="#多类型导入" class="headerlink" title="多类型导入"></a>多类型导入</h2><p>自定义导入类型；针对带有txt族类型文件的族，通过软件选项卡中的载入族选项进行族的导入，点击导入后可看到选择族类型的窗口，在窗口中可以自由选择需要载入的类型；如下所示：</p><p><img alt="导入" data-src="https://s11.ax1x.com/2024/02/20/pFYL2q0.png" class="lazyload"></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      true
+    
+    </summary>
+    
+    
+      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
+    
+  </entry>
   
   <entry>
     <title>使用QQ影音实现视频快速生成GIF</title>
@@ -514,31 +539,6 @@
       <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
     
       <category term="插件" scheme="http://sxxkearth.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>win11安装及配置</title>
-    <link href="http://sxxkearth.github.io/2022/04/04/win11%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/"/>
-    <id>http://sxxkearth.github.io/2022/04/04/win11%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/</id>
-    <published>2022-04-04T02:27:28.000Z</published>
-    <updated>2023-06-14T13:59:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  win11更新已经有一段时间了，刚好最近有空更新了一下win11。win11相对win10界面讨喜了很多，这应该也是大多人更新体验的原因之一。对比之下，win11界面变化还是比较大的，很多设置的选项位置及设置方式都做了一定的修改，加上早期系统本身的bug，升级win11后还是需要投入一定的学习成本。</p><!-- more --><h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><p>  新版win11系统可前往<a href="https://msdn.pe8.com/win11.html">MSDN原版之家</a>获取原版ISO镜像进行安装，暂不推荐其他ghost版本。提供迅雷下载地址及百度云下载地址，推荐选择迅雷下载地址高速下载。百度云下载推荐此设置<code>设置--传输--下载提速：利用限制带宽为下载加速</code>，打开提速模式，并在闲暇时间段下载，可大幅提高下载速度。</p><p><img alt="百度云设置后" data-src="https://s1.ax1x.com/2023/06/14/pCnz0l8.jpg" class="lazyload"></p><p>  原版ISO镜像可在pe系统下使用win安装器进行安装，详细安装步骤见<a href="https://sxxkearth.github.io/2018/10/21/win%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">win系统安装</a>第4.2.2节Pe下ISO文件的安装相关内容。可使用<a href="https://www.yrxitong.com/">小鱼儿yr</a>提供的<a href="https://wwb.lanzouw.com/i6u0yid">win10数字权力激活工具</a>对系统进行永久激活，可使用<a href="https://wwb.lanzouw.com/iOEAg02iyq2d">WDcontrol</a>关闭win11下的windowsdefender。</p><h2 id="初识win11"><a href="#初识win11" class="headerlink" title="初识win11"></a>初识win11</h2><p>  win11窗口大多改为圆角矩形，界面清新喜人，右键菜单也变得更加简洁了。作为一直用默认输入法的我，新的输入法皮肤更是深得我心。右键去除了刷新，去除了压缩包直接解压到当前文件夹，甚至连常用的复制粘贴位置都做了一定的调整。新的开始菜单不支持标题分组，不支持抽屉，右下角时间不支持显示秒等等问题，都给整个过度期带来了一定的痛点。<br><img alt="界面" data-src="https://s1.ax1x.com/2023/06/14/pCnzB6S.jpg" class="lazyload"></p><p>  升级后功耗与win10相差无几，本人配置实测功耗约85w，睡眠功耗3.5w，系统刚安装完在更新的时候功耗偶尔会超过200w。设备配置参考：<br><img alt="配置参考" data-src="https://s1.ax1x.com/2023/06/14/pCnzDOg.jpg" class="lazyload"></p><h2 id="win11安卓子系统"><a href="#win11安卓子系统" class="headerlink" title="win11安卓子系统"></a>win11安卓子系统</h2><p>  现阶段国内win11安卓子系统无法在应用商店直接下载安装，需要自己手动下载<a href="http://jxz2.tqqyun.com/pc/win11azazrj.zip">WSA_1.7.32815.0.Msixbundle</a>并安装。（<a href="https://www.microsoft.com/en-us/p/windows-subsystem-for-android-with-amazon-appstore/9p3395vx91nr">商前往应用商店</a>）下载后使用<code>win+x</code>快捷键选择打开<code>windows终端（管理员）</code>,在终端面板输入<code>cd 在此输入下载好的路径</code>，使用<code>Add-AppPackage -Path .\WSA_1.7.32815.0.Msixbundle</code> （名称按照实际文件名以tab键补全即可）对软件进行安装。若软件安装过程中出现如下报错，则需补充安装<a href="https://wwb.lanzouw.com/inoMN02m6zyf">Microsoft.UI.Xaml.2.6 </a>或者在商店更新windows终端看哪种方式能成功解决即可。注：安装前需要在Windows功能页下打开虚拟化相关功能，详请百度。</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 报错内容</span><br><span class="line">add-appxpackage : 部署失败，原因是 HRESULT: 0x80073CF3, 包无法进行更新、相关性或冲突验证。                              </span><br><span class="line">Windows 无法安装程序包 MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_x64__8wekyb3d8bbwe，因为此程序包依</span><br><span class="line">赖于一个找不到的框架。请随要安装的此程序包一起提供由“CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=W</span><br><span class="line">ashington, C=US”发布的框架“Microsoft.VCLibs.140.00.UWPDesktop”(具有中性或 x64 处理器体系结构，最低版本为 14.0.30035.</span><br><span class="line">0)。当前已安装的名称为“Microsoft.VCLibs.140.00.UWPDesktop”的框架为: {Microsoft.VCLibs.140.00.UWPDesktop_14.0.29231.0_</span><br><span class="line">x64__8wekyb3d8bbwe}</span><br><span class="line">注意: 有关其他信息，请在事件日志中查找 【ActivityId】 c06349bc-c666-0000-6aa6-63c066c6d701，或使用命令行 Get-AppPackageLo</span><br><span class="line">g -ActivityID c06349bc-c666-0000-6aa6-63c066c6d701</span><br><span class="line">所在位置 行:1 字符: 1</span><br></pre></td></tr></tbody></table></figure><p>  WSA_1.7.32815.0.Msixbundle安装后在开始菜单找到<code>windows subsystem for Android</code>及 <code>亚马逊应用商店</code>图标即表示安装成功。</p><p><img alt="开始菜单图标" data-src="https://s1.ax1x.com/2023/06/14/pCnzwSf.jpg" class="lazyload"></p><p>  通过微软商店安装<a href="https://www.microsoft.com/en-us/p/wsa-toolbox/9ppsp2mkvtgt?ocid=AID2200057_aff_7593_1243925&amp;tduid=(ir__9aed6ptowkkf6jolwy26nofjju2xtokgpd9i0g2600)(7593)(1243925)(8jN_nM5hA4g-pjRzrJm7onNFYnooh.hHRQ)()&amp;ranMID=24542&amp;ranEAID=8jN%2fnM5hA4g&amp;ranSiteID=8jN_nM5hA4g-pjRzrJm7onNFYnooh.hHRQ&amp;epi=8jN_nM5hA4g-pjRzrJm7onNFYnooh.hHRQ&amp;irgwc=1&amp;irclickid=_9aed6ptowkkf6jolwy26nofjju2xtokgpd9i0g2600&amp;activetab=pivot:overviewtab">WSA Toolbox</a> 对子系统软件进行管理,打开windows subsystem for Android软件，设置中打开开发人员模式，并刷新下方IP地址。ip地址显示后打开WSA Toolbox软件，输入此ip，即可选择apk软件路径并执行安装命令。（若发现IP地址一直显示不可用，可在商店补充安装<a href="https://www.microsoft.com/store/productId/9MVVJLDMWPSG">APK文件安装程序</a>,先用此程序打开一次apk文件，再到windows subsystem for Android进行刷新，即可看到可用的IP地址。）apk安装后可在开始菜单中找到直接运行，运行速度及稳定性较部分安卓虚拟机有一定的优势。</p><p><img alt="WSA Toolbox" data-src="https://s1.ax1x.com/2023/06/14/pCnzafP.jpg" class="lazyload"><br><img alt="设置界面" data-src="https://s1.ax1x.com/2023/06/14/pCnzsmQ.jpg" class="lazyload"></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="win" scheme="http://sxxkearth.github.io/categories/win/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="win" scheme="http://sxxkearth.github.io/tags/win/"/>
     
   </entry>
   
