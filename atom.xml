@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2024-02-20T09:23:20.070Z</updated>
+  <updated>2024-11-07T13:13:23.306Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解除网页文字复制限制</title>
+    <link href="http://sxxkearth.github.io/2024/11/07/%E8%A7%A3%E9%99%A4%E7%BD%91%E9%A1%B5%E6%96%87%E5%AD%97%E5%A4%8D%E5%88%B6%E9%99%90%E5%88%B6/"/>
+    <id>http://sxxkearth.github.io/2024/11/07/%E8%A7%A3%E9%99%A4%E7%BD%91%E9%A1%B5%E6%96%87%E5%AD%97%E5%A4%8D%E5%88%B6%E9%99%90%E5%88%B6/</id>
+    <published>2024-11-07T13:10:28.000Z</published>
+    <updated>2024-11-07T13:13:23.306Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  一种解除网页文字复制限制的办法，可在部分限制文字复制的网页中实现文本复制；比如需要登录才可复制的场景；</p><!-- more --><h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><p>  网页下使用快捷键<code>F12</code>打开控制台，依次点击<code>元素</code>-<code>事件监听器</code>-<code>copy</code>，点击<code>移除</code>copy下的事项后再进行复制即可；</p><p><img alt="百度云设置后" data-src="https://s21.ax1x.com/2024/11/07/pAyDYo6.png" class="lazyload"></p><blockquote><p> 注：页面刷新后将失效； </p></blockquote></body></html>]]></content>
+    
+    <summary type="html">
+    
+      true
+    
+    </summary>
+    
+    
+      <category term="win" scheme="http://sxxkearth.github.io/categories/win/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="win" scheme="http://sxxkearth.github.io/tags/win/"/>
+    
+  </entry>
   
   <entry>
     <title>Revit清除最近打开文件预览</title>
@@ -506,35 +531,6 @@
       <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python调用的Tkinter窗口添加菜单栏</title>
-    <link href="http://sxxkearth.github.io/2023/06/14/python%E5%AE%9E%E7%8E%B0%E7%85%A7%E7%89%87%E6%89%B9%E9%87%8F%E8%BD%ACpdf/"/>
-    <id>http://sxxkearth.github.io/2023/06/14/python%E5%AE%9E%E7%8E%B0%E7%85%A7%E7%89%87%E6%89%B9%E9%87%8F%E8%BD%ACpdf/</id>
-    <published>2023-06-14T14:50:28.000Z</published>
-    <updated>2023-06-15T12:23:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  在使用python调用的Tkinter窗口添加菜单栏,菜单狼添加帮助选项及关于窗口，以展示软件详情页；</p><!-- more --><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img alt="pCuk5dO.png" data-src="https://s1.ax1x.com/2023/06/14/pCuk5dO.png" class="lazyload"></p><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建菜单栏对象</span></span><br><span class="line">menu_bar = tk.Menu(root)</span><br><span class="line">root.config(menu=menu_bar)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加“帮助”菜单项</span></span><br><span class="line">help_menu = tk.Menu(menu_bar, tearoff=<span class="number">0</span>)</span><br><span class="line">menu_bar.add_cascade(label=<span class="string">"帮助"</span>, menu=help_menu)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加“关于”子菜单项</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">about</span>():</span><br><span class="line">    about_window = tk.Toplevel(root)</span><br><span class="line">    about_window.title(<span class="string">"关于"</span>)</span><br><span class="line">    about_window.geometry(<span class="string">"300x200"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建标签对象，并将其添加到窗口中</span></span><br><span class="line">    title_label = tk.Label(about_window, text=<span class="string">"MIDBIM问题报告处理器"</span>, font=(<span class="string">"微软雅黑"</span>, <span class="number">14</span>, <span class="string">"bold"</span>), bg=<span class="string">'#b93a2c'</span>,fg=<span class="string">'white'</span>)</span><br><span class="line">    title_label.pack(pady=<span class="number">10</span>, fill=<span class="string">'x'</span>)</span><br><span class="line">    title_label.place(relx=<span class="number">0.5</span>, rely=<span class="number">0.2</span>, anchor=<span class="string">'sw'</span>)</span><br><span class="line">    title_label.pack(pady=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    version_label = tk.Label(about_window, text=<span class="string">"版本号：1.0"</span>, font=(<span class="string">"微软雅黑"</span>, <span class="number">10</span>))</span><br><span class="line">    version_label.pack()</span><br><span class="line"></span><br><span class="line">    author_label = tk.Label(about_window, text=<span class="string">"作者：嗜血星空earth"</span>, font=(<span class="string">"微软雅黑"</span>, <span class="number">10</span>))</span><br><span class="line">    author_label.pack()</span><br><span class="line"></span><br><span class="line">    link = <span class="string">"sxxkearth.github.io"</span>  <span class="comment"># 将链接地址设置为百度网站 URL</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建链接标签对象，并将其添加到窗口中</span></span><br><span class="line">    link_label = tk.Label(about_window, text=<span class="string">"sxxkearth.github.io"</span>, font=(<span class="string">"微软雅黑"</span>, <span class="number">9</span>), fg=<span class="string">"blue"</span>, cursor=<span class="string">"hand2"</span>)</span><br><span class="line">    link_label.pack(pady=<span class="number">10</span>)</span><br><span class="line">    link_label.bind(<span class="string">"&lt;Button-1&gt;"</span>, <span class="keyword">lambda</span> e: webbrowser.open_new(link))</span><br><span class="line"></span><br><span class="line">    copyright_label = tk.Label(about_window, text=<span class="string">"© 2023 嗜血星空earth"</span>, font=(<span class="string">"微软雅黑"</span>, <span class="number">8</span>))</span><br><span class="line">    copyright_label.place(relx=<span class="number">0.5</span>, rely=<span class="number">1</span>, anchor=<span class="string">'s'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">help_menu.add_command(label=<span class="string">"关于"</span>, command=about)</span><br></pre></td></tr></tbody></table></figure><h2 id="软件包引入"><a href="#软件包引入" class="headerlink" title="软件包引入"></a>软件包引入</h2><p>要实现超链接🔗点击自动跳转到浏览器打开，需要调用<code>webbrowser</code>软件包,py文件最前面补充下列代码：</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import webbrowser #点击跳转链接</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
-    
-    <summary type="html">
-    
-      false
-    
-    </summary>
-    
-    
-      <category term="python" scheme="http://sxxkearth.github.io/categories/python/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="python" scheme="http://sxxkearth.github.io/tags/python/"/>
-    
-      <category term="Tkinter" scheme="http://sxxkearth.github.io/tags/Tkinter/"/>
-    
-      <category term="源码" scheme="http://sxxkearth.github.io/tags/%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
