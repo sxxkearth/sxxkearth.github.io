@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2024-11-07T13:33:27.648Z</updated>
+  <updated>2024-11-08T04:19:55.442Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Revit中解决参数单位不一致问题</title>
+    <link href="http://sxxkearth.github.io/2024/11/08/Revit%E4%B8%AD%E8%A7%A3%E5%86%B3%E5%8F%82%E6%95%B0%E5%8D%95%E4%BD%8D%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/"/>
+    <id>http://sxxkearth.github.io/2024/11/08/Revit%E4%B8%AD%E8%A7%A3%E5%86%B3%E5%8F%82%E6%95%B0%E5%8D%95%E4%BD%8D%E4%B8%8D%E4%B8%80%E8%87%B4%E9%97%AE%E9%A2%98/</id>
+    <published>2024-11-08T05:30:28.000Z</published>
+    <updated>2024-11-08T04:19:55.442Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  解决Revit中参数单位不一致问题，实现如长度参数值匹配到角度参数中；为不同单位参数之间赋予公式关系；</p><!-- more --><h2 id="实现途径"><a href="#实现途径" class="headerlink" title="实现途径"></a>实现途径</h2><p>  单通过新建一个同单位的，值为1 的参数，作为被除数可获得其数值；将参数的单位除掉；</p><p>     再通过新建另一个单位的，值为1 的参数与数值相乘，填入到参数中，实现数值关系；</p><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p> 以长度数值作为角度的数值输入时；分别现见<code>长度1</code>与<code>角度1</code>参数，值均为<code>1</code>；</p><p> 为角度设置公式为：<code>角度=长度/长度1*角度1</code>；</p><h3 id="参数添加"><a href="#参数添加" class="headerlink" title="参数添加"></a>参数添加</h3><p><img alt="参数添加" data-src="https://s21.ax1x.com/2024/11/08/pAyhRQP.png" class="lazyload"></p><h3 id="公式设置"><a href="#公式设置" class="headerlink" title="公式设置"></a>公式设置</h3><p><img alt="公式设置" data-src="https://s21.ax1x.com/2024/11/08/pAyhWsf.png" class="lazyload"></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      true
+    
+    </summary>
+    
+    
+      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
+    
+  </entry>
   
   <entry>
     <title>使用批处理实现文件按日期整理</title>
@@ -494,31 +519,6 @@
     <updated>2023-06-15T12:10:16.000Z</updated>
     
     <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  解决Revit软件与CAD软件闪退问题，提供单版本让软件闪退与多版本软件闪退两种情况的解决办法；</p><!-- more --><h2 id="单版本软件闪退解决办法"><a href="#单版本软件闪退解决办法" class="headerlink" title="单版本软件闪退解决办法"></a>单版本软件闪退解决办法</h2><p>  单个版本软件闪退多为激活文件问题，可通过删除激活文件，打开后重新激活即可解决。打开激活文件路径:C:\ProgramData\FLEXnet，将文件夹内容全部删除后再打开软件，看到激活页面后重新激活即可。</p><p><img alt="激活" data-src="https://s1.ax1x.com/2023/06/15/pCKyS8f.png" class="lazyload"></p><h2 id="多版本软件闪退解决办法"><a href="#多版本软件闪退解决办法" class="headerlink" title="多版本软件闪退解决办法"></a>多版本软件闪退解决办法</h2><p>当多版本或多软件出现闪退，如revit出现闪退，cad多版本出现<code>许可检出超时。AutoCAD将关闭</code>。字样问题，为Autodesk 证书授权进程未正确运行。</p><p><img alt="报错" data-src="https://s1.ax1x.com/2023/06/15/pCKyEan.png" class="lazyload"></p><p>右键此电脑-管理-服务，查看<code>FlexNet Licensing Service 64</code>服务状态是否为正在运行，若非正在运行，通过<code>右键-启动</code>。</p><p><img alt="服务项" data-src="https://s1.ax1x.com/2023/06/15/pCKsbKe.png" class="lazyload"></p><p>若右键能够正常启动，启动后重新打开软件即可。能顺利打开软件之后，将此服务启动类型改为自动，确保下次能够稳定运行。若点击右键-启动后，提示未能找到软件，则需将此服务软件放置于对应文件夹下。可从其他正常使用的电脑中拷贝，也可点此下载。文件路径为<code>C:\Program Files\Common Files\Macrovision Shared\FLEXnet Publisher\FNPLicensingService64.exe</code></p><p><img alt="软件" data-src="https://s1.ax1x.com/2023/06/15/pCKyAVs.png" class="lazyload"></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Revit缓存文件快速清理</title>
-    <link href="http://sxxkearth.github.io/2023/06/15/Revit%E7%BC%93%E5%AD%98%E6%96%87%E4%BB%B6%E6%B8%85%E7%90%86/"/>
-    <id>http://sxxkearth.github.io/2023/06/15/Revit%E7%BC%93%E5%AD%98%E6%96%87%E4%BB%B6%E6%B8%85%E7%90%86/</id>
-    <published>2023-06-15T11:45:28.000Z</published>
-    <updated>2023-06-15T11:51:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>&#8195;&#8195;  使用windows批处理功能，实现对Revit缓存文件xxx.001.rvt文件快速清理，提供清理本文件夹及本文件夹与子文件夹中缓存文件两种方式；</p><!-- more --><p>新建一个txt文件，把以下代码拷贝到文件中并保存，将此txt文件的后缀名称由<code>.txt</code>修改为<code>.bat</code>,将文件拷贝到需要清理的目录中，双击修改后的文件即可；</p><h2 id="清理当前文件夹中的缓存文件"><a href="#清理当前文件夹中的缓存文件" class="headerlink" title="清理当前文件夹中的缓存文件"></a>清理当前文件夹中的缓存文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del *.*.rvt/s</span><br><span class="line">del *.*.rfa/s</span><br></pre></td></tr></table></figure><h2 id="清理当前文件夹及子文件夹中的缓存文件-8195-8195"><a href="#清理当前文件夹及子文件夹中的缓存文件-8195-8195" class="headerlink" title="清理当前文件夹及子文件夹中的缓存文件&#8195;&#8195;"></a>清理当前文件夹及子文件夹中的缓存文件&#8195;&#8195;</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">for /r %%i in (*.*.rvt *.*.rfa) do (</span><br><span class="line">    del &quot;%%i&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
