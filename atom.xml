@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2024-11-08T04:19:55.442Z</updated>
+  <updated>2024-11-27T01:19:51.694Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Revit实现按标高显示构件、调整构件基准标高</title>
+    <link href="http://sxxkearth.github.io/2024/11/27/Revit%E5%AE%9E%E7%8E%B0%E6%8C%89%E6%A0%87%E9%AB%98%E6%98%BE%E7%A4%BA%E6%9E%84%E4%BB%B6%E3%80%81%E8%B0%83%E6%95%B4%E6%9E%84%E4%BB%B6%E5%9F%BA%E5%87%86%E6%A0%87%E9%AB%98/"/>
+    <id>http://sxxkearth.github.io/2024/11/27/Revit%E5%AE%9E%E7%8E%B0%E6%8C%89%E6%A0%87%E9%AB%98%E6%98%BE%E7%A4%BA%E6%9E%84%E4%BB%B6%E3%80%81%E8%B0%83%E6%95%B4%E6%9E%84%E4%BB%B6%E5%9F%BA%E5%87%86%E6%A0%87%E9%AB%98/</id>
+    <published>2024-11-27T00:30:28.000Z</published>
+    <updated>2024-11-27T01:19:51.694Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  安利一款能够实现在Revit中按标高显示构件，对构件基准标高进行调整的软件：<code>快速弹夹</code>；可快速提高建筑信息模型质量，满足相关质检及应用要求；</p><!-- more --><h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><ul><li>隔离显示楼层构件  –实现对某一基准标高的构件隔离显示，用于快速复核构件标高是否有误；</li><li>快速修改构件标高  –实现对基准标高构件错误的构件进行基准标高的快速切换；不影响构件相对位置</li></ul><p>  </p><p><img alt="功能界面" data-src="https://s21.ax1x.com/2024/11/27/pA4QX1H.png" class="lazyload"></p><h2 id="演示视频"><a href="#演示视频" class="headerlink" title="演示视频"></a>演示视频</h2><p><strong>显示任意楼层插件演示视频：</strong></p><div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"video":{"url":"https://vdn6.vzuu.com/HD/15bb875a-a57a-11ef-bbda-8a7fe281e2d7-v8_f2_t1_gKq2oeZe.mp4?pkey=AAVKRHYe-gwY5THLwbkrmGEpXkRxlx2a3eaxn2fRGT4gFwYo8seBlkgcNUmTkoDVHD-pjspcLJgi0saP9dAMnmi9&bu=1513c7c2&c=avc.8.0&expiration=1732676680&f=mp4&pu=e59e796c&v=ks6&pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&pf=Web&pt=zhihu"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><p><strong>自动修改构件所属标高属性，并且保持位置不移动演示视频：</strong></p><p>目前适配构件类型有：<strong>墙、梁、板、柱、楼梯、常规模型、门、窗、管线、管件</strong>等</p><div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"video":{"url":"\n\nhttps://vdn.vzuu.com/HD/83654430-a57a-11ef-a812-8a7fe281e2d7-v8_f2_t1_4V7V6X1a.mp4?auth_key=1732672069-0-0-633123ac01d431f7148fd2df10b9d7f3&bu=1513c7c2&c=avc.8.0&disable_local_cache=1&expiration=1732672069&f=mp4&pu=e59e796c&v=ali&pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&pf=Web&pt=zhihu"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><h2 id="本文转载地址"><a href="#本文转载地址" class="headerlink" title="本文转载地址"></a>本文转载地址</h2><p><a href="https://zhuanlan.zhihu.com/p/7101590907">Revit二次开发——检查楼层、自动修改构件标高</a>     —-原创作者<a href="https://www.zhihu.com/people/wo-shi-ge-shou-233">我是歌手233</a></p><h2 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h2><p>点击跳转至<a href="http://www.kuaisudanjia.cn/">快速弹夹</a>官方地址获取软件下载安装包；</p><p><img alt="快速弹夹" data-src="https://s21.ax1x.com/2024/11/27/pA4lf58.png" class="lazyload"></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      true
+    
+    </summary>
+    
+    
+      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
+    
+    
+      <category term="转载" scheme="http://sxxkearth.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
+    
+  </entry>
   
   <entry>
     <title>Revit中解决参数单位不一致问题</title>
@@ -508,31 +533,6 @@
       <category term="python" scheme="http://sxxkearth.github.io/tags/python/"/>
     
       <category term="源码" scheme="http://sxxkearth.github.io/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决Revit及CAD闪退</title>
-    <link href="http://sxxkearth.github.io/2023/06/15/%E8%A7%A3%E5%86%B3Revit%E5%8F%8ACAD%E9%97%AA%E9%80%80/"/>
-    <id>http://sxxkearth.github.io/2023/06/15/%E8%A7%A3%E5%86%B3Revit%E5%8F%8ACAD%E9%97%AA%E9%80%80/</id>
-    <published>2023-06-15T12:00:28.000Z</published>
-    <updated>2023-06-15T12:10:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  解决Revit软件与CAD软件闪退问题，提供单版本让软件闪退与多版本软件闪退两种情况的解决办法；</p><!-- more --><h2 id="单版本软件闪退解决办法"><a href="#单版本软件闪退解决办法" class="headerlink" title="单版本软件闪退解决办法"></a>单版本软件闪退解决办法</h2><p>  单个版本软件闪退多为激活文件问题，可通过删除激活文件，打开后重新激活即可解决。打开激活文件路径:C:\ProgramData\FLEXnet，将文件夹内容全部删除后再打开软件，看到激活页面后重新激活即可。</p><p><img alt="激活" data-src="https://s1.ax1x.com/2023/06/15/pCKyS8f.png" class="lazyload"></p><h2 id="多版本软件闪退解决办法"><a href="#多版本软件闪退解决办法" class="headerlink" title="多版本软件闪退解决办法"></a>多版本软件闪退解决办法</h2><p>当多版本或多软件出现闪退，如revit出现闪退，cad多版本出现<code>许可检出超时。AutoCAD将关闭</code>。字样问题，为Autodesk 证书授权进程未正确运行。</p><p><img alt="报错" data-src="https://s1.ax1x.com/2023/06/15/pCKyEan.png" class="lazyload"></p><p>右键此电脑-管理-服务，查看<code>FlexNet Licensing Service 64</code>服务状态是否为正在运行，若非正在运行，通过<code>右键-启动</code>。</p><p><img alt="服务项" data-src="https://s1.ax1x.com/2023/06/15/pCKsbKe.png" class="lazyload"></p><p>若右键能够正常启动，启动后重新打开软件即可。能顺利打开软件之后，将此服务启动类型改为自动，确保下次能够稳定运行。若点击右键-启动后，提示未能找到软件，则需将此服务软件放置于对应文件夹下。可从其他正常使用的电脑中拷贝，也可点此下载。文件路径为<code>C:\Program Files\Common Files\Macrovision Shared\FLEXnet Publisher\FNPLicensingService64.exe</code></p><p><img alt="软件" data-src="https://s1.ax1x.com/2023/06/15/pCKyAVs.png" class="lazyload"></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
     
   </entry>
   
