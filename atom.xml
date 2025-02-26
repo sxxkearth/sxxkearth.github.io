@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2025-01-23T08:07:26.410Z</updated>
+  <updated>2025-02-26T06:58:27.229Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Enscape全景图保存</title>
+    <link href="http://sxxkearth.github.io/2025/01/26/Enscape%E5%85%A8%E6%99%AF%E5%9B%BE%E4%BF%9D%E5%AD%98/"/>
+    <id>http://sxxkearth.github.io/2025/01/26/Enscape%E5%85%A8%E6%99%AF%E5%9B%BE%E4%BF%9D%E5%AD%98/</id>
+    <published>2025-01-26T00:00:28.000Z</published>
+    <updated>2025-02-26T06:58:27.229Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  Enscape输出的全景图在上传前被保存在XML数据文件中，本文描述从改XML文件中提取出完整全景图的方法；</p><!-- more --><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img alt="导出位置" data-src="https://s21.ax1x.com/2025/02/26/pE3CI8e.png" class="lazyload"></p><p>  <code>Revit</code>软件中，使用<code>Enscape</code>输出全景图后本地文件中并未见到新生成的照片，通过对电脑中文件进行检索，发现在<code>C:\Users\Administrator\Documents\Enscape\Panoramas</code>路径下，新生成了一个<code>panorama_1.xml</code>文件；通过使用Xml Viewer对该文件进行查看发现全景图照片照片数据是以<code>Base64</code>编码的形式存储在该XML文件的<code>&lt;ImageContent&gt;</code>标签中；在此基础上，制作工具对照片进行提取；</p><p><img alt="xml文件" data-src="https://s21.ax1x.com/2025/02/26/pE3PKM9.png" class="lazyload"></p><h2 id="基础代码"><a href="#基础代码" class="headerlink" title="基础代码"></a>基础代码</h2><figure class="highlight c#"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Xml;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">{</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">    {</span><br><span class="line">        <span class="built_in">string</span> xmlFilePath = <span class="string">@"C:\Users\earth\Documents\Enscape\Panoramas\panorama_1.xml"</span>;  <span class="comment">// 指定的XML文件路径</span></span><br><span class="line">        <span class="built_in">string</span> desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);</span><br><span class="line">        ExtractPhotosFromXml(xmlFilePath, desktopPath);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ExtractPhotosFromXml</span>(<span class="params"><span class="built_in">string</span> xmlFilePath, <span class="built_in">string</span> outputDirectory</span>)</span></span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">using</span> (XmlReader reader = XmlReader.Create(xmlFilePath))</span><br><span class="line">        {</span><br><span class="line">            <span class="built_in">int</span> photoIndex = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (reader.Read())</span><br><span class="line">            {</span><br><span class="line">                <span class="keyword">if</span> (reader.NodeType == XmlNodeType.Element &amp;&amp; reader.Name == <span class="string">"ImageContent"</span>)</span><br><span class="line">                {</span><br><span class="line">                    <span class="built_in">string</span> base64Data = reader.ReadElementContentAsString();</span><br><span class="line">                    <span class="built_in">byte</span>[] photoData = Convert.FromBase64String(base64Data);</span><br><span class="line"></span><br><span class="line">                    <span class="built_in">string</span> photoFilePath = Path.Combine(outputDirectory, <span class="string">$"photo_<span class="subst">{photoIndex}</span>.png"</span>);</span><br><span class="line">                    File.WriteAllBytes(photoFilePath, photoData);</span><br><span class="line">                    Console.WriteLine(<span class="string">$"提取并保存照片 <span class="subst">{photoIndex}</span> 到 <span class="subst">{photoFilePath}</span>"</span>);</span><br><span class="line"></span><br><span class="line">                    photoIndex++;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h2 id="软件界面"><a href="#软件界面" class="headerlink" title="软件界面"></a>软件界面</h2><p>通过选择XML文件进行图片保存，保存文件位于xml源位置；</p><p><img alt="界面" data-src="https://s21.ax1x.com/2025/02/26/pE3Pm24.png" class="lazyload"></p><h2 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h2><p>软件下载：<a href="https://wwhb.lanzn.com/ijnxw2owf1sd">Enscape全景图提取XmlToPhoto.exe</a></p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      false
+    
+    </summary>
+    
+    
+      <category term="c#" scheme="http://sxxkearth.github.io/categories/c/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="C#" scheme="http://sxxkearth.github.io/tags/C/"/>
+    
+      <category term="BIM" scheme="http://sxxkearth.github.io/tags/BIM/"/>
+    
+      <category term="源码" scheme="http://sxxkearth.github.io/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>使用正则表达式提取字符串中的数字</title>
@@ -37,9 +66,9 @@
     
       <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
-      <category term="源码" scheme="http://sxxkearth.github.io/tags/%E6%BA%90%E7%A0%81/"/>
-    
       <category term="C#" scheme="http://sxxkearth.github.io/tags/C/"/>
+    
+      <category term="源码" scheme="http://sxxkearth.github.io/tags/%E6%BA%90%E7%A0%81/"/>
     
       <category term="数据提取" scheme="http://sxxkearth.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8F%90%E5%8F%96/"/>
     
@@ -504,35 +533,6 @@
       <category term="office" scheme="http://sxxkearth.github.io/tags/office/"/>
     
       <category term="excel" scheme="http://sxxkearth.github.io/tags/excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel解决打印行高不完整</title>
-    <link href="http://sxxkearth.github.io/2023/06/20/Excel%E8%A7%A3%E5%86%B3%E6%89%93%E5%8D%B0%E8%A1%8C%E9%AB%98%E4%B8%8D%E5%AE%8C%E6%95%B4/"/>
-    <id>http://sxxkearth.github.io/2023/06/20/Excel%E8%A7%A3%E5%86%B3%E6%89%93%E5%8D%B0%E8%A1%8C%E9%AB%98%E4%B8%8D%E5%AE%8C%E6%95%B4/</id>
-    <published>2023-06-20T14:28:28.000Z</published>
-    <updated>2023-06-20T14:40:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  Excel解决打印时行高打印不完整；通过对不同行数的单元格进行行高调整，解决Excel行内容打印不完整问题；对行高大于14的行，行高加10，对行高大于28的行，行高加20，对行高大于41的行，行高加40；作用于选中的单元格</p><!-- more --><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>宏代码执行前需选中需要执行操作的单元格；</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Sub AdjustRowHeightBasedOnSelection()</span><br><span class="line">    Dim rng As Range</span><br><span class="line">    Dim row As Range</span><br><span class="line"></span><br><span class="line">    Set rng = Selection ' 使用当前所选单元格范围进行调整行高</span><br><span class="line"></span><br><span class="line">    For Each row In rng.Rows</span><br><span class="line">        If row.RowHeight &gt; 14 Then</span><br><span class="line">            row.RowHeight = row.RowHeight + 10</span><br><span class="line">        End If</span><br><span class="line">        If row.RowHeight &gt; 28 Then</span><br><span class="line">            row.RowHeight = row.RowHeight + 20</span><br><span class="line">        End If</span><br><span class="line">        If row.RowHeight &gt; 41 Then</span><br><span class="line">            row.RowHeight = row.RowHeight + 40</span><br><span class="line">        End If</span><br><span class="line">    Next row</span><br><span class="line">End Sub</span><br></pre></td></tr></tbody></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>在Excel软件中，点击<code>文件——选项——自定义功能区——勾选开发工具</code>；</p><p><img alt="开发工具" data-src="https://s1.ax1x.com/2023/06/20/pC8qGqO.png" class="lazyload"></p><p>在<code>开发工具</code>选项卡，点击<code>宏</code>进行添加宏;</p><p><img alt="新建宏" data-src="https://s1.ax1x.com/2023/06/20/pC8q8sK.png" class="lazyload"></p><p>将代码贴入代码窗口;执行前<code>选中需要执行的单元格</code>，点击<code>绿色小三角形</code>执行即可；</p><p><img alt="执行" data-src="https://s1.ax1x.com/2023/06/20/pC8q3M6.png" class="lazyload"></p><p>上方具体数据可根据实际需要进行相关修改</p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="office" scheme="http://sxxkearth.github.io/categories/office/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="office" scheme="http://sxxkearth.github.io/tags/office/"/>
-    
-      <category term="excel" scheme="http://sxxkearth.github.io/tags/excel/"/>
-    
-      <category term="排版" scheme="http://sxxkearth.github.io/tags/%E6%8E%92%E7%89%88/"/>
     
   </entry>
   
