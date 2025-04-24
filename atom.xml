@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sxxkearth.github.io/"/>
-  <updated>2025-04-24T07:11:37.886Z</updated>
+  <updated>2025-04-24T09:47:26.891Z</updated>
   <id>http://sxxkearth.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CAD中将一样的圆替换为块</title>
+    <link href="http://sxxkearth.github.io/2025/04/24/CAD%E4%B8%AD%E5%B0%86%E4%B8%80%E6%A0%B7%E7%9A%84%E5%9C%86%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%9D%97/"/>
+    <id>http://sxxkearth.github.io/2025/04/24/CAD%E4%B8%AD%E5%B0%86%E4%B8%80%E6%A0%B7%E7%9A%84%E5%9C%86%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%9D%97/</id>
+    <published>2025-04-24T09:45:20.000Z</published>
+    <updated>2025-04-24T09:47:26.891Z</updated>
+    
+    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p> 针对Revit软件中翻模插件一般是基于CAD图块生成构件进行翻模操作，为解决在图纸标准化程度不足或块被无故炸开后无法进行翻模的问题，使用下述CAD插件在CAD图纸中，将选择类似对象选中的一致构件替换为名称一致的通一个块，使图纸支持翻模；下述插件功能以圆为例制作；</p><!-- more --><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img alt="效果展示" data-src="https://s21.ax1x.com/2025/04/24/pEoQjET.png" class="lazyload"></p><h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight lisp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">; Copyright By 嗜血星空earth</span></span><br><span class="line"> <span class="comment">;将选中的一模一样的圆替换为块；注：圆的尺寸必须一样；</span></span><br><span class="line"></span><br><span class="line">(<span class="name">defun</span> c<span class="symbol">:CB</span> (<span class="name">/</span> ss i ent blockName basePoint)</span><br><span class="line">  (<span class="name">setq</span> blockName (<span class="name">getstring</span> <span class="string">"\n请输入块的名称: "</span>)) <span class="comment">; 提示用户输入块名称</span></span><br><span class="line">  (<span class="name">if</span> (<span class="name">and</span> blockName (<span class="name">not</span> (<span class="name">equal</span> blockName <span class="string">""</span>)))</span><br><span class="line">    (<span class="name">progn</span></span><br><span class="line">      (<span class="name">setq</span> ss (<span class="name">ssget</span> '((<span class="number">0</span> . <span class="string">"CIRCLE"</span>)))) <span class="comment">; 手动选择圆形</span></span><br><span class="line">      (<span class="name">if</span> ss</span><br><span class="line">        (<span class="name">progn</span></span><br><span class="line">          (<span class="name">setq</span> i <span class="number">0</span>) <span class="comment">; 初始化计数器</span></span><br><span class="line">          <span class="comment">; 获取第一个圆的实体名称和圆心</span></span><br><span class="line">          (<span class="name">setq</span> ent (<span class="name">ssname</span> ss i)) </span><br><span class="line">          (<span class="name">setq</span> basePoint (<span class="name">cdr</span> (<span class="name">assoc</span> <span class="number">10</span> (<span class="name">entget</span> ent)))) <span class="comment">; 获取圆心</span></span><br><span class="line">          </span><br><span class="line">          <span class="comment">; 创建块</span></span><br><span class="line">          (<span class="name">command</span> <span class="string">"_BLOCK"</span> blockName basePoint ent <span class="string">""</span>) <span class="comment">; 创建块并指定基点和实体</span></span><br><span class="line"></span><br><span class="line">          <span class="comment">; 在第一个圆的位置插入块（原始位置）</span></span><br><span class="line">          (<span class="name">command</span> <span class="string">"_INSERT"</span> blockName basePoint <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">          <span class="comment">; 遍历所有圆</span></span><br><span class="line">          (<span class="name">repeat</span> (<span class="name">sslength</span> ss)</span><br><span class="line">            (<span class="name">setq</span> ent (<span class="name">ssname</span> ss i)) <span class="comment">; 获取当前圆</span></span><br><span class="line">            <span class="comment">; 在圆心位置插入块</span></span><br><span class="line">            (<span class="name">command</span> <span class="string">"_INSERT"</span> blockName (<span class="name">cdr</span> (<span class="name">assoc</span> <span class="number">10</span> (<span class="name">entget</span> ent))) <span class="number">1</span> <span class="number">1</span> <span class="number">0</span>)</span><br><span class="line">            <span class="comment">; 删除原来的圆</span></span><br><span class="line">            (<span class="name">command</span> <span class="string">"_ERASE"</span> ent <span class="string">""</span>) <span class="comment">; 清理圆形</span></span><br><span class="line">            (<span class="name">setq</span> i (<span class="number">1</span>+ i)) <span class="comment">; 计数器增加</span></span><br><span class="line">          )</span><br><span class="line">        )</span><br><span class="line">        (<span class="name">princ</span> <span class="string">"\n未选择任何圆形对象！"</span>) <span class="comment">; 如果未选择任何圆形，则提示</span></span><br><span class="line">      )</span><br><span class="line">    )</span><br><span class="line">    (<span class="name">princ</span> <span class="string">"\n块名称无效！"</span>) <span class="comment">; 如果用户未输入有效块名称，则提示</span></span><br><span class="line">  )</span><br><span class="line">  (<span class="name">princ</span>)</span><br><span class="line">)</span><br></pre></td></tr></tbody></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>   下载下方附件，在cad中点击<code>工具</code>-<code>加载应用程序</code>-<code>选中下载的文件</code>-<code>加载</code>;对插件进行加载；加载后，使用<code>CB</code>命令执行命令，根据提示给定块的名称后点击空格进行执行；</p><p>  为保证插件执行准确性，内容选中务必通过<code>右键图元</code>-<code>选择类似对象</code>进行对象选择；</p><p><img alt="对象选择" data-src="https://s21.ax1x.com/2025/04/24/pEolwMn.png" class="lazyload"></p><h2 id="附件下载"><a href="#附件下载" class="headerlink" title="附件下载"></a>附件下载</h2><p>点此<a href="https://wwhb.lanzn.com/iqOHR2ucx06j">下载cad圆转块插件</a>，插件格式为<code>lsp</code>；</p></body></html>]]></content>
+    
+    <summary type="html">
+    
+      false
+    
+    </summary>
+    
+    
+      <category term="BIM" scheme="http://sxxkearth.github.io/categories/BIM/"/>
+    
+    
+      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+      <category term="软件学习" scheme="http://sxxkearth.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="CAD" scheme="http://sxxkearth.github.io/tags/CAD/"/>
+    
+  </entry>
   
   <entry>
     <title>解决Revit报错FlexNet License Finder</title>
@@ -510,31 +537,6 @@
       <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="Revit" scheme="http://sxxkearth.github.io/tags/Revit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ps编辑ico图标</title>
-    <link href="http://sxxkearth.github.io/2023/06/27/ps%E7%BC%96%E8%BE%91ico%E5%9B%BE%E6%A0%87/"/>
-    <id>http://sxxkearth.github.io/2023/06/27/ps%E7%BC%96%E8%BE%91ico%E5%9B%BE%E6%A0%87/</id>
-    <published>2023-06-27T14:50:28.000Z</published>
-    <updated>2023-06-27T17:08:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<html><head><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script></head><body><p>  在Photoshop中使用<code>icoFormat64.8bi</code>插件，实现对ico图标的打开，编辑与保存，提高ico图标制作效率；</p><!-- more --><h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><p>使用<code>icoFormat64.8bi</code>插件，下载插件，将文件放置于 <code>C:\Program Files\Adobe\Adobe Photoshop CC 2019\Plug-ins</code>路径下</p><p><img alt="Untitled" data-src="https://s1.ax1x.com/2023/06/28/pCdAomq.png" class="lazyload"></p><p>放入插件后，即可通过ps<code>直接打开ico</code>文件，同时可在<code>文件-存储为</code>下选择存储为ico格式；</p><p><img alt="打开" data-src="https://s1.ax1x.com/2023/06/28/pCdAT00.png" class="lazyload"></p><p><img alt="另存为" data-src="https://s1.ax1x.com/2023/06/28/pCdA5Xn.png" class="lazyload"></p><p><img alt="保存" data-src="https://s1.ax1x.com/2023/06/28/pCdA46s.png" class="lazyload"></p><h2 id="附件下载"><a href="#附件下载" class="headerlink" title="附件下载"></a>附件下载</h2><p><a href="https://wwhb.lanzouw.com/inQ8C10lz82d">点此下载附件icoFormat64.8bi</a></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      true
-    
-    </summary>
-    
-    
-      <category term="adobe" scheme="http://sxxkearth.github.io/categories/adobe/"/>
-    
-    
-      <category term="原创" scheme="http://sxxkearth.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
-    
-      <category term="Photoshop" scheme="http://sxxkearth.github.io/tags/Photoshop/"/>
     
   </entry>
   
